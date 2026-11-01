@@ -4,48 +4,38 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 09 - Add all 5 array values</h1>
+	<h1>Program 09 - Copy String into Another String</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter 5 values of array from user and add all values.</p>
+	<p>Write a program to enter a string from user and copy that string into another string.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to input 5 array values and another loop to add all element into the sum variable.</p>
+	<p>Use strcpy() function to copy the first string into the second string.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
 
 void main()
 {
-	int num[5], sum = 0, i;
+	char str[20], str2[20];
 
-	printf("Enter 5 values: \n");
-	
-	for(i = 0; i <= 4; i++)
-	{
-		scanf("%d",&num[i]);
-	}
+	printf("Enter a string: ");
+	gets(str);
 
-	
-	for(i = 0; i <= 4; i++)
-	{
-		sum = sum + num[i];
-	}
+	strcpy(str2,str);
 
-	printf("Sum of array values = %d",sum);
+	printf("Original string: %s\n",str);
+	printf("Copied string: %s",str2);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
-12
-17
-19
-87
-103
-Sum of array values = 238
+Enter a string: Welcome to PGGC-11
+Original string: Welcome to PGGC-11
+Copied string: Welcome to PGGC-11
+
 </pre>
 	
-
 </body>
 </html>

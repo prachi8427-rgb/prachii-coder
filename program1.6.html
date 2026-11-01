@@ -1,53 +1,41 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 06</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 06 - Print positive numbers from array</h1>
+	<h1>Program 06 - Find Length of String</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter an array from user and print the number which is positive.</p>
+	<p>Write a program to enter a string from user and final length of the string.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to check each array element. If an element is greater than zero then print it.</p>
+	<p>Use strlen() function to count the total characters in the string.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
 
 void main()
 {
-	int num[5], i;
+	char str[20];
+	int num;
 
-	printf("Enter 5 values: \n");
-	
-	for(i = 0; i <= 4; i++)
-	{
-		scanf("%d",&num[i]);
-	}
+	printf("Enter a string: ");
+	gets(str);
 
-	printf("Positive number are :\n");
-	for(i = 0; i <= 4; i++)
-	{
-		if(num[i] > 0)
-		{
-			printf("%d ",num[i]);
-		}
-	}
+	num = strlen(str);
 
-
+	printf("Length of string: %d",num);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
--12
-17
-0
-87
--103
-Positive number are :
-17 87
+Enter a string: Programming is fun
+Length of string: 18
+
 </pre>
-	</body>
+	
+</body>
 </html>

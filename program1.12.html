@@ -4,49 +4,48 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 12 - Find maximum value in array</h1>
+	<h1>Program 12 - Copy String in Reverse Order</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to find maximum values of array.</p>
+	<p>Write a program to enter the string from user and copy reverse order into another string.</p>
 	<h2>Logic</h2>
-	<p>Assume the first array element is the maximum, then compare it with all other elements and update the maximum whenever a greater value is found.</p>
+	<p>Find the length of the string and copy its characters from the last position to the first position into another string.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
 
 void main()
 {
-	int num[5], i, max;
+	char str[20], str2[20];
+	int i, num;
 
-	printf("Enter 5 values: \n");
-	
-	for(i = 0; i <= 4; i++)
+	printf("Enter a string: ");
+	gets(str);
+
+	num = strlen(str) - 1;
+
+	for(i = 0; num >= 0; i++)
 	{
-		scanf("%d",&num[i]);
+		str2[i] = str[num];
+		num--;
 	}
 
-	max = num[0];
+	str2[i] = '\0';
 
-	for(i = 1; i <= 4; i++)
-	{
-		if(num[i] > max)
-		  max = num[i];
-	}
-
-	printf("Maximum value = %d",max);
+	printf("Original string: %s\n",str);
+	printf("Copied string: %s",str2);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
-103
-19
-87
-12
-17
-Maximum value = 103
+Enter a string: Welcome to PGGC-11
+Original string: Welcome to PGGC-11
+Copied string: 11-CGGP ot emocleW
+
 </pre>
 	
+
 </body>
 </html>

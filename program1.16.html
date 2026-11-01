@@ -1,37 +1,46 @@
-﻿<html>
+<html>
 <head>
 	<title>Program 16</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 16 - Find the Sum From 0 to a Given Number</h1>
+	<h1>Program 16 - Count Vowels in String</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a number from user and print total from 0 to that number.</p>
+	<p>Write a program to enter the string from user and count all vowels.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to add all number from 0 to the entered number.</p>
+	<p>check each character of the string and increase the counter whenever a vowel is found.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num, i, sum = 0;
+	char str[20];
+	int i, count = 0;
 
-	printf("Enter a number: ");
-	scanf("%d",&num);
+	printf("Enter a string: ");
+	gets(str);
+	
+	for(i = 0; str[i] != '\0'; i++)
+	{
+		if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' ||
+		   str[i] == 'o' || str[i] == 'u' || str[i] == 'A' || 
+		   str[i] == 'E' || str[i] == 'I' || str[i] == 'O' ||
+		   str[i] == 'U')
+		{
+			count++;
+		}
+	}
 
-	for(i = 0; i <= num; i++)
-	sum = sum + i;
-
-	printf("Sum = %d",sum);
+	printf("Total vowels : %d",count);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 8
-Sum = 36
+Enter a string: Education
+Total vowels : 5
 </pre>
 	
 

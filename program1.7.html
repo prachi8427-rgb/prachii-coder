@@ -4,45 +4,41 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 07 - Square all values of array</h1>
+	<h1>Program 07 - Compare Two Strings</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter an array from user and square all the values of array.</p>
+	<p>Write a program to enter a two string from user and compare those string.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to access each array element and multiply it by itself to calculate its square.</p>
+	<p>Use strcmp() function to compare both strings. If the result is zero, both strings are equal.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
 
 void main()
 {
-	int num[5], i;
+	char str[20], str2[20];
 
-	printf("Enter 5 values: \n");
-	
-	for(i = 0; i <= 4; i++)
-	{
-	  scanf("%d",&num[i]);
-	}
+	printf("Enter first string: ");
+	gets(str);
 
-	printf("Square of array values are :\n");
-	for(i = 0; i <= 4; i++)
-	{
-	  printf("%d ",num[i] * num[i]);
-	}
+	printf("Enter Second string: ");
+	gets(str2);
+
+	if(strcmp(str,str2) == 0)
+	  printf("Both strings are equal.");
+	else
+	  printf("Both strings are not equal.");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
-2
-3
-4
-5
-6
-Square of array values are :
-4 9 16 25 36
+Enter first string: Computer
+Enter Second string: BCA-I
+Both strings are not equal.
+
 </pre>
-	</body>
+	
+</body>
 </html>

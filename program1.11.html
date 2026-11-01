@@ -4,58 +4,47 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 11 - Sort array in ascending order</h1>
+	<h1>Program 11 - Print Each Character in New Line</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter five values of array and sort in ascending order.</p>
+	<p>Write a program to enter the string from user and print each character in new line.</p>
 	<h2>Logic</h2>
-	<p>Use nested for loop to compare array elements and swap them whenever the previous element is greater than the next element.</p>
+	<p>Check whether the entered position is within the string length. If valid, print the character at the position otherwise print out of bound</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num[5], i, j, temp;
+	char str[20];
+	int i;
 
-	printf("Enter 5 values: \n");
-	
-	for(i = 0; i <= 4; i++)
+	printf("Enter a string: ");
+	gets(str);
+
+	printf("Characters are :\n");
+
+	for(i = 0; str[i] != '\0'; i++)
 	{
-		scanf("%d",&num[i]);
+		printf("%c\n",str[i]);
 	}
 
-	for(i = 0; i <= 3; i++)
-	{
-		for(j = 0; j >= 3-i; j++)
-		{
-			if(num[j] > num[j+1])
-			{
-				temp = num[j];
-				num[j] = num[j+1];
-				num[j+1] = temp;
-			}
-		}
-	}
-
-	printf("Array in ascending order:\n");
-	for(i = 0; i<= 4; i++)
-	{
-		printf("%d ", num[i]);
-	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
-103
-19
-87
-12
-17
-Array in ascending order:
-12 17 19 87 103
+Enter a string: PGGC-11
+Characters are :
+P
+G
+G
+C
+-
+1
+1
 </pre>
+	
+
 </body>
 </html>

@@ -4,49 +4,43 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 13 - Find Minimum value in array</h1>
+	<h1>Program 13 - Difference Between Characters of Two Strings</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to find minimum  values of array.</p>
+	<p>Write a program to enter two string from user and print difference each character.</p>
 	<h2>Logic</h2>
-	<p>Assume the first array element is the minimum, then compare it with all other elements and update the minimum whenever a smaller value is found.</p>
+	<p>Subtract the ASCII value of each character of the second string from the corresponding character of the first string.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num[5], i, mini;
+	char str[20], str2[20];
+	int i, diff;
 
-	printf("Enter 5 values: \n");
-	
-	for(i = 0; i <= 4; i++)
+	printf("Enter first string: ");
+	gets(str);
+	printf("Enter second string: ");
+	gets(str2);
+
+	for(i = 0; str[i] != '\0' && str2[i] != '\0'; i++)
 	{
-		scanf("%d",&num[i]);
+		printf("Difference of %c and %c = %d\n",str[i],str2[i],diff);
 	}
-
-	mini = num[0];
-
-	for(i = 1; i <= 4; i++)
-	{
-		if(num[i] < mini)
-		  mini = num[i];
-	}
-
-	printf("Minimum value = %d",mini);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
-103
-19
-87
-12
-17
-Minimum value = 12
+Enter first string: ABC
+Enter second string: XYZ
+Difference of A and X = -23
+Difference of B and Y = -23
+Difference of C and Z = -23
+
 </pre>
 	
+
 </body>
 </html>

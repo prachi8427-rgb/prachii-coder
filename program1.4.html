@@ -4,74 +4,49 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 04 - Subtract Two Matrices</h1>
+	<h1>Program 04 - Convert String into Title Case</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter 2 matrix from user and subtract them.</p>
+	<p>Write a program to enter a string from user and convert into title case.</p>
 	<h2>Logic</h2>
-	<p>Subtract the corresponding elements of both matrices and store the result in a third matrix.</p>
+	<p>Convert the first letter of each word into uppercase and all other letters into lowercase.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num[2][2], b[2][2], sub[2][2], i, j;
+	char str[20];
+	int i;
 
-	printf("Enter 4 values in first matrix: \n");
-	
-	for(i = 0; i <= 1; i++)
+	printf("Enter a string: ");
+	gets(str);
+
+	for(i = 0; str[i] != '\0'; i++)
 	{
-		for(j = 0; j<=1; j++)
+		if(i==0 || str[i-1] == ' ')
 		{
-			scanf("%d",&num[i][j]);
+			if(str[i] >= 'a' && str[i] <= 'z')
+	          str[i] = str[i] - 32;
 		}
-	}
-	printf("Enter 4 values in second matrix: \n");
-	
-	for(i = 0; i <= 1; i++)
-	{
-		for(j = 0; j<=1; j++)
-		{
-			scanf("%d",&b[i][j]);
-		}
-	}
 
-
-	for(i = 0; i <= 1; i++)
-	{
-		for(j = 0; j<=1; j++)
+		else
 		{
-			sub[i][j] = num[i][j] - b[i][j];
+			if(str[i] >= 'A' && str[i] <= 'Z')
+		      str[i] = str[i] + 32;
 		}
 	}
 
-
-	printf("\nSubtraction of Matrices : \n");
-	for(i = 0; i <= 1; i++)
-	{
-		for(j = 0; j<=1; j++)
-		{
-			printf("%d ",&sub[i][j]);
-		}
-		printf("\n");
-	}	
+	printf("Title case: %s",str);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 4 values in first matrix: 
-10 20
-30 40
-Enter 4 values in second matrix: 
-1 2
-3 4
+Enter a string: welcome tO pUNjab uniVersity
+Title case: Welcome To Punjab University
 
-Subtraction of Matrices : 
-9 18
-27 36
 </pre>
-	
+
 </body>
 </html>

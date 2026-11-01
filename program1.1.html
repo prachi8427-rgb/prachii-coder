@@ -4,55 +4,40 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 01 - Enter Four Numbers and Print them in a Matrix</h1>
+	<h1>Program 01 - Convert String into Uppercase</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter the four number from user and print it into matrix.</p>
+	<p>Write a program to enter a string from user and convert in uppercase.</p>
 	<h2>Logic</h2>
-	<p>Use nested loops to input four numbers and display them in matrix form.</p>
+	<p>Check each character of the string. If it is a lower case then subtract 32 from its ASCII value to convert it into uppercase.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num[2][2], i, j;
+	char str[20];
+	int i;
 
-	printf("Enter 4 values: \n");
-	
-	for(i = 0; i <= 1; i++)
+	printf("Enter a string: ");
+	gets(str);
+
+	for(i = 0; str[i] != '\0'; i++)
 	{
-		for(j = 0; j<=1; j++)
-		{
-			scanf("%d",&num[i][j]);
-		}
+		if(str[i] >= 'a' && str[i] <= 'z')
+		str[i] = str[i] - 32;
 	}
 
-	printf("Matrix is: \n");
-	for(i = 0; i <= 1; i++)
-	{
-		for(j = 0; j<=1; j++)
-		{
-			printf("%d ",&num[i][j]);
-		}
-		printf("\n");
-	}	
-
+	printf("Uppercase String : %s",str);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 4 values: 
-10
-20
-30
-40
-Matrix is: 
-10 20
-30 40
+Enter a string: prachi
+Uppercase String : PRACHI
+
 </pre>
 	
-
 </body>
 </html>

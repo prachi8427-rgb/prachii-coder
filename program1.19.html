@@ -4,40 +4,70 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 19 - Password Input up to 20 character</h1>
+	<h1>Program 19 - Student Details Using String</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter password from user maximum 20 digits / character press enter key if you want to exit.</p>
+	<p>Write a program to Enter the data from user the data consist of roll no. ,name ,class , marks of 5 subjects.</p>
 	<h2>Logic</h2>
-	<p>Use a character array to store the password and a for loop to accept up to 20 characters.</p>
+	<p>Accept student details using character arrays and display all the entered information.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int i;
-	char pass[21];
+	char name[20], class[10];
+	int i, roll, m[5];
 
-	printf("Enter password : ");
-	for(i = 0; i < 20; i++)
+	printf("Roll no. : ");
+	scanf("%d",&roll);
+	fflush(stdin);
+	printf("Enter Student name: ");
+	gets(name);
+	printf("Enter class: ");
+	gets(class);
+	printf("Enter marks of 5 subjects: \n");
+	for(i = 0; i <= 4; i++)
 	{
-		pass[i] = getche();
-
-		if(pass[i] == 13)
-		break;
+	printf("Subject %d: ", i + 1);
+	scanf("%d",&m[i]);
 	}
 
-	pass[i] = '\0';
-	printf("\nPassword: %s",pass);
+	printf("\nStudent Details\n");
+	printf("Roll Number: %d\n",roll);
+	printf("Name : %s\n",name);
+	printf("Class : %s\n",class);
+	for(i = 0; i <= 4; i++)
+	{
+	printf("Subjects %d marks: %d\n", i + 1, m[i]);
+	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter password : Prachi/4017/26
-Password: Prachi/4017/26
+Roll no. : 4017
+Enter Student name: Prachi
+Enter class: BCA-I
+Enter marks of 5 subjects: 
+Subject 1: 89
+Subject 2: 85
+Subject 3: 78
+Subject 4: 88
+Subject 5: 86
+
+
+Student Details
+Roll Number: 4017
+Name : Prachi
+Class : BCA-I
+Subjects 1 marks: 89
+Subjects 2 marks: 85
+Subjects 3 marks: 78
+Subjects 4 marks: 88
+Subjects 5 marks: 86
 </pre>
 	
+
 </body>
 </html>

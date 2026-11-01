@@ -1,37 +1,42 @@
-﻿<html>
+<html>
 <head>
 	<title>Program 17</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 17 - Find Factorial of a Number</h1>
+	<h1>Program 17 - Print Character at Given Index</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a number from user and find out factorial of that number.</p>
+	<p>Write a program to enter the string from user and enter bound number and print character on that bound.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to multiply all number from 1 to the entered number.</p>
+	<p>Check whether the entered index is within the string length. If valid, print the character at the index.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
 
 void main()
 {
-	int num, i, fact = 1;
+	char str[20];
+	int num;
 
-	printf("Enter a number: ");
+	printf("Enter a string: ");
+	gets(str);
+	printf("Enter index number: ");
 	scanf("%d",&num);
 
-	for(i = 0; i <= num; i++)
-	fact = fact * i;
-
-	printf("Factorial = %d",fact);
+	if(num >= 0 && num < strlen(str))
+	  printf("Character: %c",str[num]);
+	else
+	  printf("Out of bound!");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 6
-Factorial = 720
+Enter a string: Chandigarh
+Enter index number: 4
+Character: d
 </pre>
 	
 

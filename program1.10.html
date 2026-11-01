@@ -4,57 +4,41 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 10 - Search a value in array</h1>
+	<h1>Program 10 - Print Character at Given Position</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter 5 values of array from user, enter a value from user and search this value in array, if value is found then print “found” or not then print “not found”.</p>
+	<p>Write a program to enter the string from user ,enter a number from user ,if the user enter 0 then you will print first character of string ,if the user enter 1 then you will print second character of string ,if user enter 2 then you will print third character of string ,if user enter 3 then you point fourth character of string and if out of string then you will print out of bound.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to compare the search value with each array element.</p>
+	<p>Check whether the entered position is within the string length. If valid, print the character at the position otherwise print out of bound</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
 
 void main()
 {
-	int num[5], find = 0, search, i;
+	char str[20];
+	int num;
 
-	printf("Enter 5 values: \n");
-	
-	for(i = 0; i <= 4; i++)
-	{
-		scanf("%d",&num[i]);
-	}
+	printf("Enter a string: ");
+	gets(str);
+	printf("Enter position: ");
+	scanf("%d",&num);
 
-	printf("Enter value to search: ");
-	scanf("%d",&search);
-
-	
-	for(i = 0; i <= 4; i++)
-	{
-		if(num[i] == search)
-		{
-			find = 1;
-			break;
-		}
-	}
-	if(find == 0)
-	  printf("Not Found");
+	if(num >= 0 && num < strlen(str))
+	  printf("Character: %c",str[num]);
 	else
-	  printf("Found");
+	  printf("Out of bound!");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
-12
-17
-19
-87
-103
-Enter value to search: 87
-Found
+Enter a string: Computer
+Enter position: 3
+Character: p
 </pre>
 	
+
 </body>
 </html>

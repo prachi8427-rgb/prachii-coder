@@ -1,53 +1,43 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 08</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 08 - Print odd numbers from 5 array values</h1>
+	<h1>Program 08 - Concatenate Two Strings</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter 5 values of array from user and print odd number of array.</p>
+	<p>Write a program to enter a two string from user and concatenate the string.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to access each array element. If en element is not divisible by 2 then print it.</p>
+	<p>Use strcat() function to join the second string at the end of the first string.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
 
 void main()
 {
-	int num[5], i;
+	char str[20], str2[20];
 
-	printf("Enter 5 values: \n");
-	
-	for(i = 0; i <= 4; i++)
-	{
-		scanf("%d",&num[i]);
-	}
+	printf("Enter first string: ");
+	gets(str);
 
-	printf("Odd numbers are :\n");
-	for(i = 0; i <= 4; i++)
-	{
-		if(num[i] % 2)
-		{
-			printf("%d ",num[i]);
-		}
-	}
+	printf("Enter Second string: ");
+	gets(str2);
 
+	strcat(str,str2);
 
+	printf("Concatenated string: %s",str);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
-12
-17
-19
-87
-103
-Odd numbers are :
-17 19 87 103
+Enter first string: hello
+Enter Second string: world
+Concatenated string: hello world
+
 </pre>
 	
 

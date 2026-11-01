@@ -4,37 +4,48 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 18 - Print the Range Between Two Numbers</h1>
+	<h1>Program 18 - String Palindrome</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter two numbers from user and print range from first number to second number.</p>
+	<p>Write a program to enter the string from user and check string palindrome example (using reverse).</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to print each number from first number to the second number.</p>
+	<p>Compare the character from the beginning and end of the string. If all characters match, the string is a palindrome.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
 
 void main()
 {
-	int num1, num2, i;
+	char str[20];
+	int i, num, check = 1;
 
-	printf("Enter starting number: ");
-	scanf("%d",&num1);
-	printf("Enter ending number: ");
-	scanf("%d",&num2);
+	printf("Enter a string: ");
+	gets(str);
 
-	for(i = num1; i <= num2; i++)
+	num = strlen(str) - 1;
+
+	for(i = 0; i < num; i++)
 	{
-		printf("%d ",i);
+		if(str[i] != str[num])
+		{
+			check = 0;
+			break;
+		}
+		num--;
 	}
+
+	if(check == 1)
+	  printf("String is palindrome.");
+	else
+	  printf("String is not palindrome.");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter starting number: 87
-Enter ending number: 103
-87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103
+Enter a string: level
+String is palindrome.
 </pre>
 	
 
