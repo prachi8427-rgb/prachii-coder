@@ -1,40 +1,62 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 06</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 06 - Find Length of String</h1>
+	<h1>Program 06 - Swap Numbers Using Call by function</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a string from user and final length of the string.</p>
-	<h2>Logic</h2>
-	<p>Use strlen() function to count the total characters in the string.</p>
+	<p>Write a program to swap numbers using Call by function.</p>
+
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
+
+void swap(int a, int b)
+{
+	int temp;
+
+	temp = a;
+	a = b;
+	b = temp;
+
+	printf("\nAfter swapping inside function:\n");
+	printf("First number = %d\n",a);
+	printf("Second number = %d\n",b);
+}
 
 void main()
 {
-	char str[20];
-	int num;
+	int x, y;
 
-	printf("Enter a string: ");
-	gets(str);
+	printf("Enter first number: ");
+	scanf("%d",&x);
+	printf("Enter second number: ");
+	scanf("%d",&y);
 
-	num = strlen(str);
+	printf("\nBefore swapping:\n");
+	printf("First number = %d\n",x);
+	printf("Second number = %d\n",y);
 
-	printf("Length of string: %d",num);
+	swap(x,y);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a string: Programming is fun
-Length of string: 18
+Enter first number: 87
+Enter second number: 17
 
+
+Before swapping:
+First number = 87
+Second number = 17
+
+
+After swapping inside function:
+First number = 17
+Second number = 87
 </pre>
 	
 </body>

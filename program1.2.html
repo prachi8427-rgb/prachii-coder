@@ -4,41 +4,48 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 02 - Convert String into Lowercase</h1>
+	<h1>Program 02 - Add 10 numbers</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a string from user and convert into lowercase.</p>
-	<h2>Logic</h2>
-	<p>Check each character of the string. If it is a uppercase then add 32 to its ASCII value to convert it into lowercase.</p>
+	<p>Write a program to enter 10 number from the user add the number and display the answer.</p>
+
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
+void sum()
+{
+	int i, n, s=0;
+
+	for(i = 1; i <= 10; i++)
+	{
+		printf("Enter a number: ");
+		scanf("%d",&n);
+		sum = sum + n;
+	}
+
+	printf("Sum = %d", sum);
+}
 
 void main()
 {
-	char str[20];
-	int i;
-
-	printf("Enter a string: ");
-	gets(str);
-
-	for(i = 0; str[i] != '\0'; i++)
-	{
-		if(str[i] >= 'A' && str[i] <= 'Z')
-		str[i] = str[i] + 32;
-	}
-
-	printf("Lowercase String : %s",str);
+	sum();
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a string: PRACHI
-Uppercase String : prachi
-
+Enter a number: 1
+Enter a number: 2
+Enter a number: 3
+Enter a number: 4
+Enter a number: 5
+Enter a number: 6
+Enter a number: 7
+Enter a number: 8
+Enter a number: 9
+Enter a number: 10
+Sum = 55
 </pre>
 	
 
 </body>
-</html>

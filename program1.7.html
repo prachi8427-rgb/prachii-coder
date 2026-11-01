@@ -4,41 +4,51 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 07 - Compare Two Strings</h1>
+	<h1>Program 07 - Find Power of a Number</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a two string from user and compare those string.</p>
-	<h2>Logic</h2>
-	<p>Use strcmp() function to compare both strings. If the result is zero, both strings are equal.</p>
+	<p>Make function for find out power of number, enter the number and power from user.</p>
+
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
+
+int power(int a, int b)
+{
+	int i, result = 1;
+	for(i = 1; i <= b; i++)
+	{
+		result = result * a;
+	}
+
+	return result;
+}
 
 void main()
 {
-	char str[20], str2[20];
+	int base, exp, res;
 
-	printf("Enter first string: ");
-	gets(str);
+	printf("Enter base: ");
+	scanf("%d",&base);
+	printf("Enter exponent: ");
+	scanf("%d",&exp);
+	
+	res = power(base,exp);
 
-	printf("Enter Second string: ");
-	gets(str2);
+	printf("\n%d raised to the power %d = %d",base ,exp ,res);
 
-	if(strcmp(str,str2) == 0)
-	  printf("Both strings are equal.");
-	else
-	  printf("Both strings are not equal.");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter first string: Computer
-Enter Second string: BCA-I
-Both strings are not equal.
+Enter base: 2
+Enter exponent: 5
 
+
+2 raised to the power 5 = 32
 </pre>
 	
+
 </body>
 </html>

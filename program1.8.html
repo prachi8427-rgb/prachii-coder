@@ -1,43 +1,47 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 08</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 08 - Concatenate Two Strings</h1>
+	<h1>Program 08 - Find Cube of a Number</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a two string from user and concatenate the string.</p>
-	<h2>Logic</h2>
-	<p>Use strcat() function to join the second string at the end of the first string.</p>
+	<p>Make function for find out Cube a user entered number.</p>
+
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
+
+int cube(int a)
+{
+	int result;
+	
+	result = a * a * a;
+
+	return result;
+}
 
 void main()
 {
-	char str[20], str2[20];
+	int num, res;
 
-	printf("Enter first string: ");
-	gets(str);
+	printf("Enter a number: ");
+	scanf("%d",&num);
 
-	printf("Enter Second string: ");
-	gets(str2);
+	res = cube(num);
 
-	strcat(str,str2);
+	printf("\nCube of %d = %d", num, res);
 
-	printf("Concatenated string: %s",str);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter first string: hello
-Enter Second string: world
-Concatenated string: hello world
+Enter a number:7
 
+
+Cube of 7 = 343
 </pre>
 	
 

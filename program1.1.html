@@ -4,40 +4,127 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 01 - Convert String into Uppercase</h1>
+	<h1>Program 01 - Perform Different Operation Using Functions</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a string from user and convert in uppercase.</p>
-	<h2>Logic</h2>
-	<p>Check each character of the string. If it is a lower case then subtract 32 from its ASCII value to convert it into uppercase.</p>
+	<p>Write a program to enter 2 number from the users add them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user add them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user add them and display the answer.</p>
+	
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
+int a, b, result;
+
+void input()
+{
+	printf("Enter first number: ");
+	scanf("%d",&a);
+	printf("Enter second number: ");
+	scanf("%d",&b);
+}
+
+void add()
+{
+	result = a + b;
+	prinf("Addition = %d\n",result);
+}
+
+void sub()
+{
+	result = a - b;
+	prinf("Subtraction = %d\n",result);
+}
+
+void mul()
+{
+	result = a * b;
+	prinf("Multiplication = %d\n",result);
+}
+
+void div()
+{
+	if(b != 0)
+	{
+		result = a / b;
+		prinf("Division = %d\n",result);
+	}
+	else
+	{
+		printf("Division Not Possible.\n")
+	}
+}
+
+
 void main()
 {
-	char str[20];
-	int i;
+	input();
+	add();
 
-	printf("Enter a string: ");
-	gets(str);
+	input();
+	sub();
 
-	for(i = 0; str[i] != '\0'; i++)
-	{
-		if(str[i] >= 'a' && str[i] <= 'z')
-		str[i] = str[i] - 32;
-	}
+	input();
+	add();
 
-	printf("Uppercase String : %s",str);
+	input();
+	mul();
+
+	input();
+	sub();
+
+	input();
+	mul();
+
+	input();
+	div();
+
+	input();
+	div();
+
+	input();
+	add();
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a string: prachi
-Uppercase String : PRACHI
+Enter first number: 10
+Enter second number: 5
+Addition = 15
 
+Enter first number: 20
+Enter second number: 8
+Subtraction = 12
+
+Enter first number: 15
+Enter second number: 5
+Addition = 20
+
+Enter first number: 6
+Enter second number: 4
+Multiplication = 24
+
+Enter first number: 30 
+Enter second number: 10
+Subtraction = 20
+
+Enter first number: 7
+Enter second number: 3
+Multiplication = 21
+
+Enter first number: 40
+Enter second number: 8
+Division = 5
+
+Enter first number: 36
+Enter second number: 6
+Division = 6
+
+Enter first number: 12
+Enter second number: 9
+Addition = 21
 </pre>
 	
+
 </body>
 </html>

@@ -4,46 +4,59 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 05 - Convert String into Toggle Case</h1>
+	<h1>Program 05 - Swap Numbers Using Call by Address</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a string from user and convert into toggle case.</p>
-	<h2>Logic</h2>
-	<p>Convert the uppercase letters into lowercase and lowercase letters into uppercase.</p>
+	<p>Write a program to swap numbers using Call by address.</p>
+
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
+void swap(int *a, int *b)
+{
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
 void main()
 {
-	char str[20];
-	int i;
+	int x, y;
 
-	printf("Enter a string: ");
-	gets(str);
+	printf("Enter first number: ");
+	scanf("%d",&x);
+	printf("Enter second number: ");
+	scanf("%d",&y);
 
-	for(i = 0; str[i] != '\0'; i++)
-	{
-		if(str[i] >= 'a' && str[i] <= 'z')
-		{
-	        str[i] = str[i] - 32;
-		}
+	printf("\nBefore swapping:\n");
+	printf("First number = %d\n",x);
+	printf("Second number = %d\n",y);
 
-		else if(str[i] >= 'A' && str[i] <= 'Z')
-		{
-			str[i] = str[i] + 32;
-		}
-	}
+	swap(&x,&y);
 
-	printf("Toggle case: %s",str);
+	printf("\nAfter swapping:\n");
+	printf("First number = %d\n",x);
+	printf("Second number = %d\n",y);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a string: cODING Is fUN
-Toggle case: Coding iS Fun
+Enter first number: 25
+Enter second number: 50
 
+
+Before swapping:
+First number = 25
+Second number = 50
+
+
+After swapping:
+First number = 50
+Second number = 25
 </pre>
 	
 

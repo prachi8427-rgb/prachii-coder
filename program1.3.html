@@ -4,44 +4,44 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 03 - Convert String into Sentence Case</h1>
+	<h1>Program 03 - Return an array from function</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a string from user and convert into sentence case.</p>
-	<h2>Logic</h2>
-	<p>Convert the first character into uppercase and all remaining characters into lowercase.</p>
+	<p>Write a program to return an array from function.</p>
+
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
+int * fun()
+{
+	static int a[]={10,20,30,40,50};
+	return a;
+}
 
 void main()
 {
-	char str[20];
-	int i;
+	int *p, i;
+	p = fun();
 
-	printf("Enter a string: ");
-	gets(str);
+	printf("Array elements are:\n");
 
-	if(str[0] >= 'a' && str[0] <= 'z')
-	  str[0] = str[0] - 32;
-
-	for(i = 1; str[i] != '\0'; i++)
+	for(i = 0; i < 5; i++)
 	{
-		if(str[i] >= 'A' && str[i] <= 'Z')
-		str[i] = str[i] + 32;
+		printf("%d\n",*p);
+		p++;
 	}
-
-	printf("Sentence case: %s",str);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a string: hELLO WORLD HOW ARE YOU
-Sentence case: Hello world how are you
-
+Array elements are:
+10
+20
+30
+40
+50
 </pre>
 	
-
 </body>
 </html>
