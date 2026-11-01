@@ -4,125 +4,74 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 01 - Perform Different Operation Using Functions</h1>
+	<h1>Program 01 - Employee Details in Tabular Form</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter 2 number from the users add them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user add them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user add them and display the answer.</p>
-	
+	<p>Create structure of employee which there is emp.ID, name, designation of 50 employees from user, print details in tabular form.</p>
+
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
-int a, b, result;
-
-void input()
+struct emp
 {
-	printf("Enter first number: ");
-	scanf("%d",&a);
-	printf("Enter second number: ");
-	scanf("%d",&b);
-}
-
-void add()
-{
-	result = a + b;
-	prinf("Addition = %d\n",result);
-}
-
-void sub()
-{
-	result = a - b;
-	prinf("Subtraction = %d\n",result);
-}
-
-void mul()
-{
-	result = a * b;
-	prinf("Multiplication = %d\n",result);
-}
-
-void div()
-{
-	if(b != 0)
-	{
-		result = a / b;
-		prinf("Division = %d\n",result);
-	}
-	else
-	{
-		printf("Division Not Possible.\n")
-	}
-}
-
+	int id;
+	char name[20];
+	char designation[30];
+};
 
 void main()
 {
-	input();
-	add();
+	struct emp e[50];
+	int i;
 
-	input();
-	sub();
+	for(i = 0; i < 50; i++)
+	{
+		printf("\nEnter details of employee %d\n", i + 1);
 
-	input();
-	add();
+		printf("Enter Employee Id: ");
+		scanf("%d",&e[i].id);
 
-	input();
-	mul();
+		printf("Enter Name: ");
+		scanf("%s",e[i].name);
 
-	input();
-	sub();
+		printf("Enter Designation: ");
+		scanf("%s",e[i].designation);
+	}
 
-	input();
-	mul();
+	printf("\n\nEMPLOYEE DETAILS\n");
+	printf("-----------------------------\n");
+	printf("ID\tNAME\t\tDESIGNATION\n");
+	printf("-----------------------------\n");
 
-	input();
-	div();
-
-	input();
-	div();
-
-	input();
-	add();
+	for(i = 0; i < 50; i++)
+	{
+	  printf("%d\t%-15s\t%s\n", e[i].id, e[i].name, e[i].designation);
+	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter first number: 10
-Enter second number: 5
-Addition = 15
+Enter details of employee 1
+Enter Employee Id: 101
+Enter Name: Rahul
+Enter Designation: Manager
 
-Enter first number: 20
-Enter second number: 8
-Subtraction = 12
+Enter details of employee 2
+Enter Employee Id: 102
+Enter Name: Aman
+Enter Designation: Clerk
+...
 
-Enter first number: 15
-Enter second number: 5
-Addition = 20
 
-Enter first number: 6
-Enter second number: 4
-Multiplication = 24
-
-Enter first number: 30 
-Enter second number: 10
-Subtraction = 20
-
-Enter first number: 7
-Enter second number: 3
-Multiplication = 21
-
-Enter first number: 40
-Enter second number: 8
-Division = 5
-
-Enter first number: 36
-Enter second number: 6
-Division = 6
-
-Enter first number: 12
-Enter second number: 9
-Addition = 21
+EMPLOYEE DETAILS
+-----------------------------
+ID	NAME	DESIGNATION
+-----------------------------
+101	Rahul	Manager
+102	Aman	Clerk
+...
 </pre>
 	
 

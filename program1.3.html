@@ -4,44 +4,74 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 03 - Return an array from function</h1>
+	<h1>Program 03 - Employees Name Characters with ID</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to return an array from function.</p>
+	<p>Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print name character with emp.ID in tabular form.</p>
 
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
-int * fun()
+
+struct emp
 {
-	static int a[]={10,20,30,40,50};
-	return a;
-}
+	int id;
+	char name[20];
+	char designation[30];
+};
 
 void main()
 {
-	int *p, i;
-	p = fun();
+	struct emp e[50];
+	int i;
 
-	printf("Array elements are:\n");
-
-	for(i = 0; i < 5; i++)
+	for(i = 0; i < 50; i++)
 	{
-		printf("%d\n",*p);
-		p++;
+		printf("\nEnter details of employee %d\n", i + 1);
+
+		printf("Enter Employee Id: ");
+		scanf("%d",&e[i].id);
+
+		printf("Enter Name: ");
+		scanf("%s",e[i].name);
+
+		printf("Enter Designation: ");
+		scanf("%s",e[i].designation);
+	}
+
+	printf("\n\nEMPLOYEE DETAILS\n");
+	printf("------------------\n");
+	printf("ID\tNAME\n");
+	printf("------------------\n");
+
+	for(i = 0; i < 50; i++)
+	{
+	  printf("%d\t%-15s\t%s\n", e[i].id, e[i].name, e[i].designation);
 	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Array elements are:
-10
-20
-30
-40
-50
+Enter details of employee 1
+Enter Employee Id: 101
+Enter Name: Rahul
+Enter Designation: Manager
+
+Enter details of employee 2
+Enter Employee Id: 102
+Enter Name: Aman
+Enter Designation: Clerk
+...
+
+
+EMPLOYEE DETAILS
+------------------
+ID	NAME	
+------------------
+101	Rahul	
+102	Aman	
+...
 </pre>
-	
-</body>
+	</body>
 </html>
