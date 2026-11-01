@@ -1,38 +1,37 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 06</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 06 - Print the Last Digit of a Number</h1>
+	<h1>Program 06 - Change the Sign of Number</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a number and print its last digit.</p>
+	<p>Enter a number from the user if it is a negative then convert into positive and if it is positive then convert into negative often that print the number.</p>
 	<h2>Logic</h2>
-	<p>Use the modulus operator (%) with 10 to find the last digit of a number.</p>
+	<p>Multiply the number by -1 to change its sign.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num,last;
-	
-	printf("Enter any number: ");
+	int num;
+
+	printf("Enter a number: ");
 	scanf("%d",&num);
-	last = num % 10;
-	printf("Last digit is = %d",last);
+
+	num = num*-1;
+
+	printf("Number after changing sign = %d",num);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter any number:9685 
-Last digit is = 5
+Enter a number: -52
+Number after changing sign = 52
 
 </pre>
-	
-
-</body>
+	</body>
 </html>

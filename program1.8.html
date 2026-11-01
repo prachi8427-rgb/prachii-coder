@@ -1,39 +1,40 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 08</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 08 - Find the Cube of a Number</h1>
+	<h1>Program 08 - Perform an Operation Based on Sign</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a number and find its cube.</p>
+	<p>Enter a number from the user if the number is negative then square the number and if it is positive then increment the number 20 times.</p>
 	<h2>Logic</h2>
-	<p>Multiply the number by itself three times to calculate its cube.</p>
-	<h2>Source Code</h2>
+	<p>Use if-else to check the sign of the number and perform the required operation.</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num,res;
-	
+	int num,i;
+
 	printf("Enter a number: ");
 	scanf("%d",&num);
-	
-	res = num * num * num;
 
-	printf("Cube = %d",res);
+	if(num < 0)
+	  printf("Square = %d", num * num);
+	else{
+	   for(i=0;i<20;i++)
+	   num++;
+	  printf("Number after 20 increments = %d",num);
+	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 10 
-Cube = 1000;
+Enter a number: 10
+Number after 20 increments = 30
 
 </pre>
-	
-</body>
+	</body>
 </html>

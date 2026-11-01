@@ -1,41 +1,39 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 09</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 09 - Round Off a Decimal Number</h1>
+	<h1>Program 09 - Check Positive or Negtive Number</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a decimal number and round it off to the nearest integer.</p>
+	<p>Enter the number from the user it the number is negative or positive and find out of that number.</p>
 	<h2>Logic</h2>
-	<p>Add 0.5 to the positive decimal number and convert it into a integer.</p>
-	<h2>Source Code</h2>
+	<p>Use if-else statement to check whether the number is positive, negative, or zero.</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	float num;
-	int round;
-	
-	printf("Enter a decimal number: ");
-	scanf("%f",&num);
-	
-	round = (int)(num + 0.5);
+	int num;
 
-	printf("Rounded number = %d",round);
+	printf("Enter a number: ");
+	scanf("%d",&num);
+
+	if(num > 0)
+	  printf("Number is Positive");
+	else if(num < 0)
+	  printf("Number is Negative");
+	else 
+	  printf("Number is Zero");	
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a decimal number: 57.8
-Rounded number = 58
+Enter a number: -10
+Number is Negative
 
 </pre>
-	
-
-</body>
+	</body>
 </html>

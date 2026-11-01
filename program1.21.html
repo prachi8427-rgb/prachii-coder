@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>Program 21</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 21 - Calculate Age From Date of Birth</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Enter current date of DOB of user and find out difference.</p>
+	<h2>Logic</h2>
+	<p>Subtract the birth date from the current date.</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+    int d1, m1, y1;
+    int d2, m2, y2;
+    int days, months, years;
+    int mdays;
+
+    clrscr();
+
+    printf("Enter current date (day month year): ");
+    scanf("%d %d %d", &d1, &m1, &y1);
+
+    printf("Enter date of birth (day month year): ");
+    scanf("%d %d %d", &d2, &m2, &y2);
+
+    if(y1 < y2 || (y1 == y2 && m1 < m2) ||
+       (y1 == y2 && m1 == m2 && d1 < d2))
+    {
+        printf("Invalid dates");
+    }
+    else
+    {
+        days = d1 - d2;
+        months = m1 - m2;
+        years = y1 - y2;
+
+        if(days < 0)
+        {
+            m1--;
+
+            if(m1 == 4 || m1 == 6 || m1 == 9 || m1 == 11)
+                mdays = 30;
+            else if(m1 == 2)
+            {
+                if(y1 % 400 == 0 ||
+                   (y1 % 4 == 0 && y1 % 100 != 0))
+                    mdays = 29;
+                else
+                    mdays = 28;
+            }
+            else
+                mdays = 31;
+
+            days = days + mdays;
+            months = months - 1;
+        }
+
+        if(months < 0)
+        {
+            months = months + 12;
+            years = years - 1;
+        }
+
+        printf("Age = %d years, %d months, %d days",
+               years, months, days);
+    }
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter current date (day month year): 28 10 2026
+Enter date of birth (day month year): 14 8 2008
+Age = 18 years, 2 months, 14 days
+</pre>
+	
+
+</body>
+</html>

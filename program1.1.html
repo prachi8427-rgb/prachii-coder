@@ -4,30 +4,37 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 01 - Example of Pre-Increament</h1>
+	<h1>Program 01 - Check Positive, Negative or Zero</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to show an example of pre-increament</p>
+	<p>Write a program to enter a number and check it is positive, negative or zero.</p>
 	<h2>Logic</h2>
-	<p>Increase the value of a variable before printing it.</p>
+	<p>Use if-else statements to check whether the number is greater than, less than or equals to zero.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int a=5;
-	
-	printf("Value of a = %d",++a);
+	int num;
+
+	printf("Enter a number: ");
+	scanf("%d",&num);
+
+	if(num > 0)
+	  printf("Number is positive.");
+	else if(num < 0)
+    	  printf("Number is negative.");
+        else 
+    	  printf("Number is Zero.");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Value of a = 6
+Enter a number: 7
+Number is positive.
 
 </pre>
-
-
-</body>
+	</body>
 </html>

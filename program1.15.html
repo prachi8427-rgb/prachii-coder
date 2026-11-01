@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Program 15</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 15 - Print a One-Digit Number in Words</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Enter one digit number from user and print in words.</p>
+	<h2>Logic</h2>
+	<p>Use switch-case to print the word corresponding to the entered digit.</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int num;
+
+	printf("Enter a single digit number (0-9): ");
+	scanf("%d",&num);
+	
+	switch(num)
+	{ 
+		case 0:
+			printf("Zero");
+			break;
+		case 1:
+			printf("One");
+			break;
+		case 2:
+			printf("Two");
+			break;
+		case 3:
+			printf("Three");
+			break;
+		case 4:
+			printf("Four");
+			break;
+		case 5:
+			printf("Five");
+			break;
+		case 6:
+			printf("Six");
+			break;
+		case 7:
+			printf("Seven");
+			break;
+		case 8:
+			printf("Eight");
+			break;
+		case 9:
+			printf("Nine");
+			break;
+		default:
+		printf("Invalid input");
+	}
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a single digit number (0-9): 7
+Seven
+
+</pre>
+	
+</body>
+</html>

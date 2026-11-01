@@ -1,47 +1,46 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 12</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 12 - Calculate Simple Interest</h1>
+	<h1>Program 12 - Check Whether Four Characters are Equal</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to calculate interest using principal, rate and time.</p>
+	<p>Enter a four characters from users and check they are equal or not.</p>
 	<h2>Logic</h2>
-	<p>Multiply principal by rate and time, then divide the result by 100.</p>
-	<h2>Source Code</h2>
+	<p>Compare all four characters.</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
-
 void main()
 {
-	float p,r,t,si;
+	char a,b,c,d;
+
+	printf("Enter 1st character: ");
+	a=getche();
+	printf("\nEnter 2nd character: ");
+	b=getche();
+	printf("\nEnter 3rd character: ");
+	c=getche();
+	printf("\nEnter 4th character: ");
+	d=getche();
 	
-	printf("Enter principal amount: ");
-	scanf("%f",&p);
-	printf("Enter rate of interest: ");
-	scanf("%f",&r);
-	printf("Enter time in years: ");
-	scanf("%f",&t);
-
-	si = (p * r * t) / 100;
-
-	printf("Simple Interest = %.2f",si);
+	if(a == b && b == c && c == d)
+	  printf("\nAll Equal");
+	else 
+	  printf("\nNot Equal");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter principal amount: 5000
-Enter rate of interest: 5
-Enter time in years: 2
-Simple Interest = 500.00
+Enter 1st character: s
+Enter 2nd character: s
+Enter 3rd character: s
+Enter 4th character: d
+Not Equal
 
 </pre>
-	
-
-</body>
-</html>										
+	</body>
+</html>

@@ -1,36 +1,38 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 02</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 02 - Example of Post-Increament</h1>
+	<h1>Program 02 - Check Odd or Even</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to show an example of post-increament</p>
+	<p>Write a program to enter a number and check it is odd or even.</p>
 	<h2>Logic</h2>
-	<p>Print the current value of a variable first and then increase it by one.</p>
+	<p>Use the modulus operator (%) to check the remainder when the number is divided by 2.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int a=5;
-	
-	printf("Value of a before increment = %d\n",a++);
-	printf("Value of a after increment = %d",a);
+	int num;
+
+	printf("Enter a number: ");
+	scanf("%d",&num);
+
+	if(num % 2)
+	  printf("Number is Odd.");
+	else 
+      	  printf("Number is Even.");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Value of a before increment = 5
-Value of a after increment = 6
+Enter a number: 7
+Number is Odd.
 
 </pre>
-	
-
 </body>
 </html>

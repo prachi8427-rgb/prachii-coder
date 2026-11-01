@@ -4,30 +4,43 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 03 - Example of Pre-Decreament</h1>
+	<h1>Program 03 - Count the Digits of a Number</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to show an example of pre-decreament</p>
+	<p>Write a program to enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit.</p>
 	<h2>Logic</h2>
-	<p>Decrease the value of a variable before printing it.</p>
+	<p>Use the if-else statements to count the digits based on the number's range.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int a=5;
-	
-	printf("Value of a = %d",--a);
+	unsigned int num;
+
+	printf("Enter a number: ");
+	scanf("%u",&num);
+
+	if(num <= 9)
+	  printf("1 Digit");
+	else if(num <=99) 
+      	  printf("2 Digit");
+ 	else if(num <=999) 
+      	  printf("3 Digit");
+    	else if(num <=9999) 
+      	  printf("4 Digit");
+   	else if(num <=99999) 
+      	  printf("5 Digit");
+    	else 
+    	  printf("More than 5 digit.");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Value of a = 4
+Enter a number: 6536
+4 Digit
 
 </pre>
-	
-
-</body>
+	</body>
 </html>

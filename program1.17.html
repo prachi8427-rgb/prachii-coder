@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Program 17</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 17 - Print a Two-Digit Number in Words</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Enter two digit number from user and print it in word (like 50 will be five zero).</p>
+	<h2>Logic</h2>
+	<p>Seperates the tens and units digits.</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int num,tens,unit;
+
+	printf("Enter a Two-digit number (10-99): ");
+	scanf("%d",&num);
+
+	if(num >= 10 && num <= 99){
+
+	tens = num / 10;
+	unit = num % 10; 
+	
+	switch(tens)
+	{ 
+		case 0: printf("Zero "); break;
+		case 1: printf("One ");break;
+		case 2: printf("Two "); break;
+		case 3: printf("Three "); break;
+		case 4: printf("Four "); break;
+		case 5: printf("Five "); break;
+		case 6: printf("Six "); break;
+		case 7: printf("Seven "); break;
+		case 8: printf("Eight "); break;
+		case 9: printf("Nine "); break;
+	}
+	switch(unit)
+	{ 
+		case 0: printf("Zero"); break;
+		case 1: printf("One");break;
+		case 2: printf("Two"); break;
+		case 3: printf("Three"); break;
+		case 4: printf("Four"); break;
+		case 5: printf("Five"); break;
+		case 6: printf("Six"); break;
+		case 7: printf("Seven"); break;
+		case 8: printf("Eight"); break;
+		case 9: printf("Nine"); break;
+	}
+  }
+	else 
+	  printf("Invalid Input");
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a Two-digit number (10-99): 87
+Eight Seven
+
+</pre>
+	
+
+</body>
+</html>

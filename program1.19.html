@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Program 19</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 19 - Check Leap Year</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Enter the year from user and check its leap year or not.</p>
+	<h2>Logic</h2>
+	<p>A year is a leap year if it is divisible by 400 or divisible by 4 but not by 100.</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int num;
+
+	printf("Enter a year: ");
+	scanf("%d",&num);
+
+	if(num % 400 == 0)
+	  printf("Leap Year");
+	else if(num % 100 == 0)
+	  printf("Not a Leap Year");
+	else if(num % 4 == 0)
+	  printf("Leap Year");
+	else
+	  printf("Not a Leap Year");
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a year: 2026
+Not a Leap Year
+
+</pre>
+	
+</body>
+</html>

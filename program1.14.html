@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Program 14</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 14 - Display Months Based on Number of Days</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Enter a number from the user if the user enters 30 then print the month in which we have 30 days. If the enter 31 then print the month 31 days for 28, 29 print the month else everything is invalid.</p>
+	<h2>Logic</h2>
+	<p>Use if-else statements to display the months according to the entered number of days.</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int days;
+
+	printf("Enter number of days: ");
+	scanf("%d",&days);
+	
+	if(days == 30)
+	  printf("April, June, September, November");
+	else if(days == 31)
+	  printf("January, March, May, July, August, October, December");
+	else if(days == 28 || days == 29)
+	  printf("February");
+	else 
+	  printf("Invalid number of days");
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter number of days: 31
+January, March, May, July, August, October, December
+
+</pre>
+	
+
+</body>
+</html>

@@ -1,42 +1,42 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 10</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 10 - Convert Lowercase to Uppercase</h1>
+	<h1>Program 10 - Find the Greater of Two Numbers</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a lowercase alphabet and convert it into uppercase.</p>
+	<p>Enter two number from user and check which is the greater number and print the greater number.</p>
 	<h2>Logic</h2>
-	<p>Subtract 32 from its ASCII value to convert it into uppercase.</p>
-	<h2>Source Code</h2>
+	<p>Compare both numbers and print the greater number.</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
 
 void main()
 {
-	char ch;
+	int a,b;
 
-	do{
-		printf("Enter a lowercase alphabet: ");
-		ch = getch();
-		printf("\n");
-	}	while(ch &lt; 'a' || ch &gt; 'z');
-	ch = ch - 32;
-	printf("Uppercase alphabet = %c",ch);
+	printf("Enter first number: ");
+	scanf("%d",&a);
+	printf("Enter second number: ");
+	scanf("%d",&b);
+
+	if(a > b)
+	  printf("Greater number = %d",a);
+	else if(a < b)
+	  printf("Greater number = %d",b");
+	else 
+	  printf("Both are equal");	
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a lowercase alphabet: b
-Uppercase alphabet = B
+Enter first number: 20
+Enter second number: 35
+Greater number = 35
 
 </pre>
-	
-
-</body>
+	</body>
 </html>

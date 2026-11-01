@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Program 18</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 18 - Identify Character Type</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Enter a character from user and it is in upper case, lower case, special characters or numbers.</p>
+	<h2>Logic</h2>
+	<p>Compare the character with uppercase letters, lower case letters, and digits.</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+	char ch;
+
+	printf("Enter a character: ");
+	ch=getche();
+
+	if(ch >= 'A' && ch <= 'Z')
+	  printf("\nUppercase Character");
+	else if(ch >= 'a' && ch <= 'z')
+	  printf("\nLowercase Character");
+	else if(ch >= '0' && ch <= '9')
+	  printf("\nNumber");
+	else
+	  printf("\nSpecial character");
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a character: S
+Uppercase Character
+
+</pre>
+	
+
+</body>
+</html>

@@ -1,47 +1,39 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 11</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 11 - Calculate Average Marks</h1>
+	<h1>Program 11 - Check Divisibility by 4</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter marks of three subjects and calculate their average.</p>
+	<p>Enter a number from user and check it is divisible by 4 or not.</p>
 	<h2>Logic</h2>
-	<p>Add the marks of subjects and calculate their average.</p>
-	<h2>Source Code</h2>
+	<p>Use modulus operator (%) to check whether the remainder is zero.</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
 
 void main()
 {
-	int num1,num2,num3;
-	float average;
+	int num;
 
-	printf("Enter first student marks: ");
-	scanf("%d",&num1);
-	printf("Enter second student marks: ");
-	scanf("%d",&num2);
-	printf("Enter third student marks: ");
-	scanf("%d",&num3);
-
-	average = (num1 + num2 + num3) / 3.0;
-
-	printf("Average marks = %.2f",average);
+	printf("Enter a number: ");
+	scanf("%d",&num);
+	
+	if(num % 4)
+	  printf("Number is not divisible by 4");
+	else 
+	  printf("Number is divisible by 4");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter first student marks: 70
-Enter second student marks: 80
-Enter third student marks: 90
-Average marks = 80
+Enter a number: 24
+Number is divisible by 4
 
 </pre>
 	
+
 </body>
 </html>

@@ -1,43 +1,40 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 07</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 07 - Print the Decimal Part of a Number</h1>
+	<h1>Program 07 - Check Whether a Character Is an Alphabet</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a number and print the digits after the decimal point.</p>
+	<p>Enter a character from the user and check that it is an alphabet.</p>
 	<h2>Logic</h2>
-	<p>Subtract the integer part of the number from the original number to get its decimal part.</p>
-	<h2>Source Code</h2>
+	<p>Check whether the character lies between A and Z or between a and z.</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
 
 void main()
 {
-	float num;
-	int a;
-	
-	printf("Enter a decimal number: ");
-	scanf("%f",&num);
-	a = num ;
-	num = num - a;
-	num = num*100;
-	a=num;
+	char ch;
 
-	printf("Decimal part = %d",a);
+	printf("Enter a Character: ");
+	
+	ch=getche();
+
+	if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+	printf("\nIt is an Alphabet");
+	else 
+	 printf("\nIt is not an Alphabet");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a decimal number: 52.63 
-Decimal part = 63
+Enter a Character: S
+It is an Alphabet
 
 </pre>
 	
-
 </body>
 </html>
