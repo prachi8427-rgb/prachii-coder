@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Program 06</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 06 — Print Your Name 5 Times with Blinking Effect</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a C program to print your name on the output screen with a blinking effect 5 times.</p>
+	<h2>Logic</h2>
+	<p>The printf() function displays the name, delay() pauses execution, and clrscr() clears the screen before the next display.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+	int i;
+
+	for(i=1; i&lt;=5; ++i)
+	{
+		clrscr();
+		printf("Prachi");
+		delay(500);
+	}
+}
+    </pre>
+	<h2>Output</h2>
+	<pre class="output">
+Prachi    </pre>
+	
+</body>
+</html>

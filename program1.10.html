@@ -1,0 +1,42 @@
+
+<html>
+<head>
+	<title>Program 10</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 10 - Print ASCII Values of Two Characters</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter two character and print their ASCII values.</p>
+	<h2>Logic</h2>
+	<p>Read two characters using getche() and display their ASCII values.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+	char ch1,ch2;
+	
+	clrscr();
+
+	printf("Enter first character:");
+	ch1=getche();
+	printf("\nEnter Second character:");
+	ch2=getche();
+	printf("\nASCII value of first character = %d\n",ch1);
+	printf("ASCII value of Second character = %d\n",ch2);
+}    
+    </pre>
+	<h2>Output</h2>
+	<pre class="output">
+Enter first character:A
+Enter Second character:B
+ASCII value of first character = 65
+ASCII value of Second character = 66
+</pre>
+	
+</body>
+</html>

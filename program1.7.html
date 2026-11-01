@@ -1,0 +1,44 @@
+
+<html>
+<head>
+	<title>Program 07</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 07 - Display C Program on Screen.</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a C program to Display the whole program on Output Screen.</p>
+	<h2>Logic</h2>
+	<p>Use printf() to display each line of the C program.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+	clrscr();
+	printf("#include\n#include\n#include\n");
+	printf("void main()\n");
+	printf("{\n");
+	printf("clrscr();\n");
+	printf("printf(\"hello,welcome to c\");\n");
+	printf("delay(5000);\n");
+	printf("}");
+	delay(5000);
+}   </pre>
+	<h2>Output</h2>
+	<pre class="output">
+#include
+#include
+#include
+void main()
+{
+clrscr();
+printf("hello,welcome to c");
+delay(5000);	
+}   </pre>
+	</body>
+</html>
