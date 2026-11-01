@@ -4,51 +4,77 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 05 - Print even numbers from array</h1>
+	<h1>Program 05 - Multiply Two Matrices</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter an array from user and print the number which is even.</p>
+	<p>Write a program to enter 2 matrix from user and multiply them.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to check each array element. If an element is dividible by 2 then print it.</p>
+	<p>Multiply the rows of the first matrix with the columns of the second matrix and add their products.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num[5], i;
+	int num[2][2], b[2][2], multi[2][2], i, j, k;
 
-	printf("Enter 5 values: \n");
+	printf("Enter 4 values in first matrix: \n");
 	
-	for(i = 0; i <= 4; i++)
+	for(i = 0; i <= 1; i++)
 	{
-		scanf("%d",&num[i]);
-	}
-
-	printf("Even numbers are :\n");
-	for(i = 0; i <= 4; i++)
-	{
-		if(num[i] % 2 ==0)
+		for(j = 0; j<=1; j++)
 		{
-			printf("%d ",num[i]);
+			scanf("%d",&num[i][j]);
+		}
+	}
+	printf("Enter 4 values in second matrix: \n");
+	
+	for(i = 0; i <= 1; i++)
+	{
+		for(j = 0; j<=1; j++)
+		{
+			scanf("%d",&b[i][j]);
 		}
 	}
 
 
+	for(i = 0; i <= 1; i++)
+	{
+		for(j = 0; j<=1; j++)
+		{
+			c[i][j] = 0;
+			for(k = 0; k <= 1; k++)
+			{
+				multi[i][j] = multi[i][j] + num[i][k] * b[k][j];
+			}
+		}
+	}
+
+
+	printf("\nMultiplication of Matrices : \n");
+	for(i = 0; i <= 1; i++)
+	{
+		for(j = 0; j<=1; j++)
+		{
+			printf("%d ",&multi[i][j]);
+		}
+		printf("\n");
+	}	
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
-12
-17
-19
-87
-103
-Even numbers are :
-12
+Enter 4 values in first matrix: 
+2 3
+4 5
+Enter 4 values in second matrix: 
+1 2
+3 4
 
+Multiplication of Matrices : 
+11 16
+19 28
 </pre>
 	
 </body>

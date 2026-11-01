@@ -4,59 +4,75 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 03 - Copy array into second array</h1>
+	<h1>Program 03 - Add Two Matrices</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter an array from user and copy the array into second array.</p>
+	<p>Write a program to enter 2 matrix from user and add them.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to copy each element of the first array into the corresponding position of the second array.</p>
+	<p>Add the corresponding elements of both matrices and store the result in a third matrix.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num[5], a[5], i;
+	int num[2][2], b[2][2], sum[2][2], i, j;
 
-	printf("Enter 5 values: \n");
+	printf("Enter 4 values in first matrix: \n");
 	
-	for(i = 0; i <= 4; i++)
+	for(i = 0; i <= 1; i++)
 	{
-		scanf("%d",&num[i]);
+		for(j = 0; j<=1; j++)
+		{
+			scanf("%d",&num[i][j]);
+		}
 	}
-
-	for(i = 0; i <= 4; i++)
+	printf("Enter 4 values in second matrix: \n");
+	
+	for(i = 0; i <= 1; i++)
 	{
-		a[i] = num[i];
-	}
-
-	printf("\nCopied successfully!\n");
-
-
-	printf("2nd Array values are :\n");
-
-	for(i = 0; i <= 4; i++)
-	{
-		printf("%d ",a[i]);
+		for(j = 0; j<=1; j++)
+		{
+			scanf("%d",&b[i][j]);
+		}
 	}
 
 
+	for(i = 0; i <= 1; i++)
+	{
+		for(j = 0; j<=1; j++)
+		{
+			sum[i][j] = num[i][j] + b[i][j];
+		}
+	}
+
+
+	printf("\nAddition of matrices : \n");
+	for(i = 0; i <= 1; i++)
+	{
+		for(j = 0; j<=1; j++)
+		{
+			printf("%d ",&sum[i][j]);
+		}
+		printf("\n");
+	}	
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
-12
-17
-19
-87
-103
+Enter 4 values in first matrix: 
+1 2
+3 4
+Enter 4 values in second matrix: 
+5 6
+7 8
 
-Copied successfully!
-2nd Array values are :
-12 17 19 87 103
-
+Addition Matrix : 
+6 8
+10 12
 </pre>
-	</body>
+	
+
+</body>
 </html>

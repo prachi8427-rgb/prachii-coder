@@ -4,49 +4,53 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 01 - Display Array Values</h1>
+	<h1>Program 01 - Enter Four Numbers and Print them in a Matrix</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter an array from user and display all the value.</p>
+	<p>Write a program to enter the four number from user and print it into matrix.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to input array elements and another for loop to display all the values.</p>
+	<p>Use nested loops to input four numbers and display them in matrix form.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num[5], i;
+	int num[2][2], i, j;
 
-	printf("Enter 5 values: \n");
+	printf("Enter 4 values: \n");
 	
-	for(i = 0; i <= 4; i++)
+	for(i = 0; i <= 1; i++)
 	{
-		scanf("%d",&num[i]);
+		for(j = 0; j<=1; j++)
+		{
+			scanf("%d",&num[i][j]);
+		}
 	}
 
-	printf("Array values are :\n");
-
-	for(i = 0; i <= 4; i++)
+	printf("Matrix is: \n");
+	for(i = 0; i <= 1; i++)
 	{
-		printf("%d ",num[i]);
-	}
-
+		for(j = 0; j<=1; j++)
+		{
+			printf("%d ",&num[i][j]);
+		}
+		printf("\n");
+	}	
 
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
-12
-17
-19
-87
-103
-Array values are :
-12 17 19 87 103
-
+Enter 4 values: 
+10
+20
+30
+40
+Matrix is: 
+10 20
+30 40
 </pre>
 	
 

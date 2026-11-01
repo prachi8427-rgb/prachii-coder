@@ -4,51 +4,68 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 02 - Print array in reverse order</h1>
+	<h1>Program 02 - Find Transpose of a Matrix</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter an array from user and print the array in reverse order.</p>
+	<p>Write a program to enter the matrix from and transpose them.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to input array elements and another for loop starting from the last index to display all the values in reverse order.</p>
+	<p>Interchange the rows and columns of the matrix to find its transponse.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num[5], i;
+	int num[2][2], i, j;
 
-	printf("Enter 5 values: \n");
+	printf("Enter 4 values: \n");
 	
-	for(i = 0; i <= 4; i++)
+	for(i = 0; i <= 1; i++)
 	{
-		scanf("%d",&num[i]);
+		for(j = 0; j<=1; j++)
+		{
+			scanf("%d",&num[i][j]);
+		}
 	}
 
-	printf("Array values are :\n");
-
-	for(i = 4; i >= 0; i--)
+	printf("\nOriginal Matrix : \n");
+	for(i = 0; i <= 1; i++)
 	{
-		printf("%d ",num[i]);
-	}
+		for(j = 0; j<=1; j++)
+		{
+			printf("%d ",&num[i][j]);
+		}
+		printf("\n");
+	}	
 
+	printf("Transpose Matrix:\n");
+	for(i = 0; i<=1; i++)
+	{
+		for(j = 0; j <= 1; j++)
+		{
+			printf("%d ",num[j][i]);
+		}
+	}
 
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 5 values: 
-12
-17
-19
-87
-103
-Array values are :
-103 87 19 17 12
+Enter 4 values: 
+10
+20
+30
+40
 
+Original Matrix : 
+10 20
+30 40
+
+Transpose Matrix:
+10 30
+20 40
 </pre>
 	
-
 </body>
 </html>
