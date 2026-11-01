@@ -5,32 +5,35 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 08 - Print Name at Center</h1>
+	<h1>Program 08 - Find the Cube of a Number</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to print your name at the center of the page.</p>
+	<p>Write a program to enter a number and find its cube.</p>
 	<h2>Logic</h2>
-	<p>Use printf() with "\n" to print the name near the center of the screen.</p>
+	<p>Multiply the number by itself three times to calculate its cube.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
 
 void main()
 {
-	clrscr();
-	printf("\n\n\n");
-	printf("               		    Prachi");
+	int num,res;
+	
+	printf("Enter a number: ");
+	scanf("%d",&num);
+	
+	res = num * num * num;
+
+	printf("Cube = %d",res);
 }
-    </pre>
+	</pre>
 	<h2>Output</h2>
 	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a number: 10 
+Cube = 1000;
 
-
-
-               		    Prachi
-
-
-    </pre>
-	</body>
+</pre>
+	
+</body>
 </html>

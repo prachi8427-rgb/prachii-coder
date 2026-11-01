@@ -1,44 +1,43 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 07</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 07 - Display C Program on Screen.</h1>
+	<h1>Program 07 - Print the Decimal Part of a Number</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a C program to Display the whole program on Output Screen.</p>
+	<p>Write a program to enter a number and print the digits after the decimal point.</p>
 	<h2>Logic</h2>
-	<p>Use printf() to display each line of the C program.</p>
+	<p>Subtract the integer part of the number from the original number to get its decimal part.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-#include &lt;dos.h&gt;
 
 void main()
 {
-	clrscr();
-	printf("#include\n#include\n#include\n");
-	printf("void main()\n");
-	printf("{\n");
-	printf("clrscr();\n");
-	printf("printf(\"hello,welcome to c\");\n");
-	printf("delay(5000);\n");
-	printf("}");
-	delay(5000);
-}   </pre>
+	float num;
+	int a;
+	
+	printf("Enter a decimal number: ");
+	scanf("%f",&num);
+	a = num ;
+	num = num - a;
+	num = num*100;
+	a=num;
+
+	printf("Decimal part = %d",a);
+}
+	</pre>
 	<h2>Output</h2>
 	<pre class="output">
-#include
-#include
-#include
-void main()
-{
-clrscr();
-printf("hello,welcome to c");
-delay(5000);	
-}   </pre>
-	</body>
+C:\TURBOC3\BIN&gt;TC
+Enter a decimal number: 52.63 
+Decimal part = 63
+
+</pre>
+	
+
+</body>
 </html>

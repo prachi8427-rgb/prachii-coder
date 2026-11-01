@@ -1,16 +1,16 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 11</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 11 - Print ASCII Characters from 0 to 127</h1>
+	<h1>Program 11 - Calculate Average Marks</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to Print all ASCII character 0 to 127</p>
+	<p>Write a program to enter marks of three subjects and calculate their average.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to print each ASCII value and its corresponding character.</p>
+	<p>Add the marks of subjects and calculate their average.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
@@ -18,45 +18,30 @@
 
 void main()
 {
-	int i;
-	
-	clrscr();
+	int num1,num2,num3;
+	float average;
 
-	for(i=0; i&lt;=127; i++){
-		printf("%d = %c\n",i,i);
-	}
-}    
-    </pre>
+	printf("Enter first student marks: ");
+	scanf("%d",&num1);
+	printf("Enter second student marks: ");
+	scanf("%d",&num2);
+	printf("Enter third student marks: ");
+	scanf("%d",&num3);
+
+	average = (num1 + num2 + num3) / 3.0;
+
+	printf("Average marks = %.2f",average);
+}
+	</pre>
 	<h2>Output</h2>
 	<pre class="output">
-0 = 
-1 = 
-...
-104 = h
-105 = i
-106 = j
-107 = k
-108 = l
-109 = m
-110 = n
-111 = o
-112 = p
-113 = q
-114 = r
-115 = s
-116 = t
-117 = u
-118 = v
-119 = w
-120 = x
-121 = y
-122 = z
-123 = {
-124 = |
-125 = }
-126 = ~
-127 =
+C:\TURBOC3\BIN&gt;TC
+Enter first student marks: 70
+Enter second student marks: 80
+Enter third student marks: 90
+Average marks = 80
 
 </pre>
-	</body>
+	
+</body>
 </html>

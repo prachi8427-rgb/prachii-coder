@@ -5,34 +5,37 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 09 - Display Password as Stars</h1>
+	<h1>Program 09 - Round Off a Decimal Number</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a password and display it as stars.</p>
+	<p>Write a program to enter a decimal number and round it off to the nearest integer.</p>
 	<h2>Logic</h2>
-	<p>Read password characters using getch() and print a star for each character.</p>
+	<p>Add 0.5 to the positive decimal number and convert it into a integer.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
 
 void main()
 {
-	char pass[6];
-	int i=0;
+	float num;
+	int round;
+	
+	printf("Enter a decimal number: ");
+	scanf("%f",&num);
+	
+	round = (int)(num + 0.5);
 
-	clrscr();
-
-	printf("Enter 6 digit Password:");
-	for(i=0; i&lt;=5; i++){
-		pass[i]=getch();
-		printf("*");
-	}
-}    
-    </pre>
+	printf("Rounded number = %d",round);
+}
+	</pre>
 	<h2>Output</h2>
 	<pre class="output">
-Enter 6 digit Password:******
-	</pre>
-	</body>
+C:\TURBOC3\BIN&gt;TC
+Enter a decimal number: 57.8
+Rounded number = 58
+
+</pre>
+	
+
+</body>
 </html>

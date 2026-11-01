@@ -1,42 +1,33 @@
-
 <html>
 <head>
 	<title>Program 03</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 03 - Read 4 Characters</h1>
+	<h1>Program 03 - Example of Pre-Decreament</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a C program to read four characters from the keyboard and display them on seperate lines.</p>
+	<p>Write a program to show an example of pre-decreament</p>
 	<h2>Logic</h2>
-	<p>The scanf() function is used to read four characters from the keybord.<br>The printf() function with \n is used to display each character on a seperate line.</p>
+	<p>Decrease the value of a variable before printing it.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	char ch1,ch2,ch3,ch4;
-
-	printf("Enter four characters(using space):")
-	scanf("%c %c %c %c",&ch1,&ch2,&ch3,&ch4);
-
-	printf("\nYou entered :\n%c \n%c \n%c \n%c",ch1,ch2,ch3,ch4);	
+	int a=5;
+	
+	printf("Value of a = %d",--a);
 }
-    </pre>
+	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
+Value of a = 4
 
-Enter four characters(using space):A B C D
-
-You entered : 
-A
-B
-C
-D
-    </pre>
+</pre>
 	
+
 </body>
 </html>

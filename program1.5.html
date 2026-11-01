@@ -1,33 +1,66 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Program 05</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 05 - Print a Single Quote</h1>
+	<h1>Program 05 - Arithmetic Operations On Two Numbers</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a C program to store a single quote in a variable and print the variable as output.</p>
+	<p>Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number from user subtract the number display the answer ,again take 2 number from user multiply the number display the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number find the remainder and display the answer</p>
 	<h2>Logic</h2>
-	<p>The printf() function with %c is used to display the stored character.</p>
+	<p>Use arithmetic operators to calculate and display the results of two numbers.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	char quote='\'';
-	printf("%c",quote);	
+	int num1,num2;
+	
+	printf("Enter two numbers: ");
+	scanf("%d %d",&num1,&num2);
+	printf("Addition = %d\n\n",num1 + num2);
+
+	printf("Enter two numbers: ");
+	scanf("%d %d",&num1,&num2);
+	printf("Subtraction = %d\n\n",num1 - num2);
+
+	printf("Enter two numbers: ");
+	scanf("%d %d",&num1,&num2);
+	printf("Multiplication = %ld\n\n",num1 * num2);
+
+	printf("Enter two numbers: ");
+	scanf("%d %d",&num1,&num2);
+	printf("Division = %d\n\n",num1 / num2);
+
+	printf("Enter two numbers: ");
+	scanf("%d %d",&num1,&num2);
+	printf("Remainder = %d\n",num1 % num2);
+
 }
-    </pre>
+	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
+Enter two numbers: 22 10
+Addition = 32
 
-\'
-    </pre>
-	<p><a href="index.html">&larr; Back to Program List</a></p>
-	<p><a href="../index.html">&larr; Back to Home</a></p>
+Enter two numbers: 63 58
+Subtraction = 5
+
+Enter two numbers: 51 5
+Multiplication = 255
+
+Enter two numbers: 50 10
+Division = 5
+
+Enter two numbers: 10 3
+Remainder = 1
+
+</pre>
+	
 
 </body>
 </html>

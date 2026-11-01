@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Program 12</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 12 - Calculate Simple Interest</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to calculate interest using principal, rate and time.</p>
+	<h2>Logic</h2>
+	<p>Multiply principal by rate and time, then divide the result by 100.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+	float p,r,t,si;
+	
+	printf("Enter principal amount: ");
+	scanf("%f",&p);
+	printf("Enter rate of interest: ");
+	scanf("%f",&r);
+	printf("Enter time in years: ");
+	scanf("%f",&t);
+
+	si = (p * r * t) / 100;
+
+	printf("Simple Interest = %.2f",si);
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter principal amount: 5000
+Enter rate of interest: 5
+Enter time in years: 2
+Simple Interest = 500.00
+
+</pre>
+	
+
+</body>
+</html>										
