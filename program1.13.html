@@ -1,47 +1,51 @@
-﻿<html>
+<html>
 <head>
 	<title>Program 13</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 13 - Check Whether a Number is Palindrome</h1>
+	<h1>Program 13 - Find Minimum value in array</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter the number from user and check its palindrome or not.</p>
+	<p>Write a program to find minimum  values of array.</p>
 	<h2>Logic</h2>
-	<p>Reverse the number and compare it with the original number.</p>
+	<p>Assume the first array element is the minimum, then compare it with all other elements and update the minimum whenever a smaller value is found.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num, original, rem, rev=0;
+	int num[5], i, mini;
 
-	printf("Enter a number: ");
-	scanf("%d",&num);
-
-	original = num;
-
-	while(num > 0)
+	printf("Enter 5 values: \n");
+	
+	for(i = 0; i <= 4; i++)
 	{
-		rem = num % 10;
-		rev = rev * 10 + rem;
-		num = num / 10;
+		scanf("%d",&num[i]);
 	}
 
-	if(original == rev)
-	  printf("Number is Palindrome");
+	mini = num[0];
 
-	else
-	  printf("Number is Not Palindrome");
+	for(i = 1; i <= 4; i++)
+	{
+		if(num[i] < mini)
+		  mini = num[i];
+	}
+
+	printf("Minimum value = %d",mini);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 121
-Number is Palindrome
+Enter 5 values: 
+103
+19
+87
+12
+17
+Minimum value = 12
 </pre>
 	
 </body>

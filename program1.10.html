@@ -4,51 +4,57 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 10 - Print Table of 4 up to 20</h1>
+	<h1>Program 10 - Search a value in array</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program print the table of 4 in the format given as below (till 20) 4*1=4 and so on.</p>
+	<p>Write a program to enter 5 values of array from user, enter a value from user and search this value in array, if value is found then print “found” or not then print “not found”.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop from 1 to 20 and multiply each number by 4.</p>
+	<p>Use a for loop to compare the search value with each array element.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int i;
+	int num[5], find = 0, search, i;
 
-	for(i = 1; i <= 20; i++)
+	printf("Enter 5 values: \n");
+	
+	for(i = 0; i <= 4; i++)
 	{
-		printf("4 * %d = %d\n", i, 4 * i);
+		scanf("%d",&num[i]);
 	}
+
+	printf("Enter value to search: ");
+	scanf("%d",&search);
+
+	
+	for(i = 0; i <= 4; i++)
+	{
+		if(num[i] == search)
+		{
+			find = 1;
+			break;
+		}
+	}
+	if(find == 0)
+	  printf("Not Found");
+	else
+	  printf("Found");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-4 * 1 = 4
-4 * 2 = 8 
-4 * 3 = 12
-4 * 4 = 16
-4 * 5 = 20
-4 * 6 = 24
-4 * 7 = 28
-4 * 8 = 32
-4 * 9 = 36
-4 * 10 = 40
-4 * 11 = 44
-4 * 12 = 48
-4 * 13 = 52
-4 * 14 = 56
-4 * 15 = 60
-4 * 16 = 64
-4 * 17 = 68
-4 * 18 = 72
-4 * 19 = 76
-4 * 20 = 80
+Enter 5 values: 
+12
+17
+19
+87
+103
+Enter value to search: 87
+Found
 </pre>
 	
-
 </body>
 </html>

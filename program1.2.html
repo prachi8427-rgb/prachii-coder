@@ -4,54 +4,48 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 02 - Check Divisibility by Any Prime Number</h1>
+	<h1>Program 02 - Print array in reverse order</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a number from the user and check that the number is divisible by any prime number or not.</p>
+	<p>Write a program to enter an array from user and print the array in reverse order.</p>
 	<h2>Logic</h2>
-	<p>Check whether the number is divisible by any prime number from 2 up to the number - 1.</p>
+	<p>Use a for loop to input array elements and another for loop starting from the last index to display all the values in reverse order.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num, i, j, prime, found = 0 ;
+	int num[5], i;
 
-	printf("Enter a number: ");
-	scanf("%d",&num);
-
-	for(i = 2; i < num ; i++)
+	printf("Enter 5 values: \n");
+	
+	for(i = 0; i <= 4; i++)
 	{
-		prime = 1;
-
-		for(j = 2; j < i; j++)
-		{
-			if(i % j== 0)
-			{
-				prime = 0;
-			    break;
-			}
-		}
-
-	if(prime == 1 && num % i == 0)
-		{ 
-		  printf("Divisible by prime number : %d",i);
-		  found = 1;
-		}
+		scanf("%d",&num[i]);
 	}
 
-	if(found == 0)
+	printf("Array values are :\n");
+
+	for(i = 4; i >= 0; i--)
 	{
-		printf("Not divisible by any smaller prime number.")
+		printf("%d ",num[i]);
 	}
+
+
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 15
-Divisible by prime number : 3
+Enter 5 values: 
+12
+17
+19
+87
+103
+Array values are :
+103 87 19 17 12
 
 </pre>
 	

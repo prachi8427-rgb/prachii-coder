@@ -4,44 +4,51 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 05 - Print Your Name 1 Lakh Times</h1>
+	<h1>Program 05 - Print even numbers from array</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to print your name 1 lakh times.</p>
+	<p>Write a program to enter an array from user and print the number which is even.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to print the name 100000 times.</p>
+	<p>Use a for loop to check each array element. If an element is dividible by 2 then print it.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int i;
+	int num[5], i;
 
-	for(i = 1; i <= 100000; i++)
+	printf("Enter 5 values: \n");
+	
+	for(i = 0; i <= 4; i++)
 	{
-		printf("Prachi\n");
+		scanf("%d",&num[i]);
 	}
+
+	printf("Even numbers are :\n");
+	for(i = 0; i <= 4; i++)
+	{
+		if(num[i] % 2 ==0)
+		{
+			printf("%d ",num[i]);
+		}
+	}
+
+
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Prachi
-Prachi
-Prachi
-Prachi
-Prachi
-Prachi
-Prachi
-Prachi
-Prachi
-Prachi
-Prachi
-Prachi
-Prachi
-Prachi
-Prachi
+Enter 5 values: 
+12
+17
+19
+87
+103
+Even numbers are :
+12
+
 </pre>
 	
 </body>

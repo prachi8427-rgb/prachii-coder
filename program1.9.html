@@ -4,41 +4,46 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 09 - Print All Odd Numbers from 1 to 100</h1>
+	<h1>Program 09 - Add all 5 array values</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program print all the odd number between 1 to 100.</p>
+	<p>Write a program to enter 5 values of array from user and add all values.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop and print numbers that are not divisible by 2.</p>
+	<p>Use a for loop to input 5 array values and another loop to add all element into the sum variable.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int i;
+	int num[5], sum = 0, i;
 
-	for(i = 1; i <= 100; i++)
+	printf("Enter 5 values: \n");
+	
+	for(i = 0; i <= 4; i++)
 	{
-		if(i % 2 != 0)
-		printf("%d\n",i);
+		scanf("%d",&num[i]);
 	}
+
+	
+	for(i = 0; i <= 4; i++)
+	{
+		sum = sum + num[i];
+	}
+
+	printf("Sum of array values = %d",sum);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 5
-3
-5
-7
-9
-11
-...
-93
-95
-97
-99
+Enter 5 values: 
+12
+17
+19
+87
+103
+Sum of array values = 238
 </pre>
 	
 

@@ -1,42 +1,61 @@
-﻿<html>
+<html>
 <head>
 	<title>Program 11</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 11 - Reverse a Number</h1>
+	<h1>Program 11 - Sort array in ascending order</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter the number from user and reverse the number.</p>
+	<p>Write a program to enter five values of array and sort in ascending order.</p>
 	<h2>Logic</h2>
-	<p>Extract the last digit using modulus, add it to the reversed number, and remove the last digit using division.</p>
+	<p>Use nested for loop to compare array elements and swap them whenever the previous element is greater than the next element.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num, rem, rev = 0;
+	int num[5], i, j, temp;
 
-	printf("Enter a number: ");
-	scanf("%d",&num);
-
-	while(num != 0)
+	printf("Enter 5 values: \n");
+	
+	for(i = 0; i <= 4; i++)
 	{
-		rem = num % 10;
-		rev = rev * 10 + rem;
-		num = num / 10;
+		scanf("%d",&num[i]);
 	}
 
-	printf("Reverse = %d",rev);
+	for(i = 0; i <= 3; i++)
+	{
+		for(j = 0; j >= 3-i; j++)
+		{
+			if(num[j] > num[j+1])
+			{
+				temp = num[j];
+				num[j] = num[j+1];
+				num[j+1] = temp;
+			}
+		}
+	}
+
+	printf("Array in ascending order:\n");
+	for(i = 0; i<= 4; i++)
+	{
+		printf("%d ", num[i]);
+	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 12345
-Reverse = 54321
+Enter 5 values: 
+103
+19
+87
+12
+17
+Array in ascending order:
+12 17 19 87 103
 </pre>
-	
 </body>
 </html>

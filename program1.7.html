@@ -4,44 +4,45 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 07 - Print Series from 1 to a Given Number</h1>
+	<h1>Program 07 - Square all values of array</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to Enter a number from the user and print the series from 1 to that number.</p>
+	<p>Write a program to enter an array from user and square all the values of array.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to print all numbers from 1 up to the entered number.</p>
+	<p>Use a for loop to access each array element and multiply it by itself to calculate its square.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num, i;
+	int num[5], i;
 
-	printf("Enter a number: ");
-	scanf("%d",&num);
-
-	for(i = 1; i <= num; i++)
+	printf("Enter 5 values: \n");
+	
+	for(i = 0; i <= 4; i++)
 	{
-		printf("%d\n",i);
+	  scanf("%d",&num[i]);
+	}
+
+	printf("Square of array values are :\n");
+	for(i = 0; i <= 4; i++)
+	{
+	  printf("%d ",num[i] * num[i]);
 	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 10
-1
+Enter 5 values: 
 2
 3
 4
 5
 6
-7
-8
-9
-10
+Square of array values are :
+4 9 16 25 36
 </pre>
-	
-</body>
+	</body>
 </html>

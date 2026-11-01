@@ -4,43 +4,50 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 08 - Print a Number 100 Times</h1>
+	<h1>Program 08 - Print odd numbers from 5 array values</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to Enter a number from the user and print that number 100 time.</p>
+	<p>Write a program to enter 5 values of array from user and print odd number of array.</p>
 	<h2>Logic</h2>
-	<p>Use a for loop to print the entered number 100 times.</p>
+	<p>Use a for loop to access each array element. If en element is not divisible by 2 then print it.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num, i;
+	int num[5], i;
 
-	printf("Enter a number: ");
-	scanf("%d",&num);
-
-	for(i = 1; i <= 100; i++)
+	printf("Enter 5 values: \n");
+	
+	for(i = 0; i <= 4; i++)
 	{
-		printf("%d\n",num);
+		scanf("%d",&num[i]);
 	}
+
+	printf("Odd numbers are :\n");
+	for(i = 0; i <= 4; i++)
+	{
+		if(num[i] % 2)
+		{
+			printf("%d ",num[i]);
+		}
+	}
+
+
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 5
-5
-5
-5
-5
-5
-5
-5
-5
-5
-5
+Enter 5 values: 
+12
+17
+19
+87
+103
+Odd numbers are :
+17 19 87 103
 </pre>
 	
 

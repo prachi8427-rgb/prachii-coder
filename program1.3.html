@@ -4,51 +4,59 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 03 - Check Whether a Number is Prime or Not</h1>
+	<h1>Program 03 - Copy array into second array</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a number from the user and check it is a prime number or not.</p>
+	<p>Write a program to enter an array from user and copy the array into second array.</p>
 	<h2>Logic</h2>
-	<p>Check whether the number is divisible by any number from 2 to num-1. If no divisor is found, it is a prime number.</p>
+	<p>Use a for loop to copy each element of the first array into the corresponding position of the second array.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num, i, prime = 1;
+	int num[5], a[5], i;
 
-	printf("Enter a number: ");
-	scanf("%d",&num);
-
-	if(num <= 1)
-	  prime = 0;
-	else 
+	printf("Enter 5 values: \n");
+	
+	for(i = 0; i <= 4; i++)
 	{
-		for(i = 2; i < num; i++)
-		{
-			if(num % i == 0)
-			{
-				prime = 0;
-				break;
-			}
-		}
+		scanf("%d",&num[i]);
 	}
 
-	if(prime == 1)
-	  printf("Number is Prime.");
-	else 
-      printf("Number is Not Prime.");
+	for(i = 0; i <= 4; i++)
+	{
+		a[i] = num[i];
+	}
+
+	printf("\nCopied successfully!\n");
+
+
+	printf("2nd Array values are :\n");
+
+	for(i = 0; i <= 4; i++)
+	{
+		printf("%d ",a[i]);
+	}
+
+
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 7
-Number is Prime.
+Enter 5 values: 
+12
+17
+19
+87
+103
+
+Copied successfully!
+2nd Array values are :
+12 17 19 87 103
 
 </pre>
-	
-
-</body>
+	</body>
 </html>
