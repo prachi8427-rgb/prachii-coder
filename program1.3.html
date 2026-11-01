@@ -4,43 +4,51 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 03 - Count the Digits of a Number</h1>
+	<h1>Program 03 - Check Whether a Number is Prime or Not</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Write a program to enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit.</p>
+	<p>Write a program to enter a number from the user and check it is a prime number or not.</p>
 	<h2>Logic</h2>
-	<p>Use the if-else statements to count the digits based on the number's range.</p>
+	<p>Check whether the number is divisible by any number from 2 to num-1. If no divisor is found, it is a prime number.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	unsigned int num;
+	int num, i, prime = 1;
 
 	printf("Enter a number: ");
-	scanf("%u",&num);
+	scanf("%d",&num);
 
-	if(num <= 9)
-	  printf("1 Digit");
-	else if(num <=99) 
-      	  printf("2 Digit");
- 	else if(num <=999) 
-      	  printf("3 Digit");
-    	else if(num <=9999) 
-      	  printf("4 Digit");
-   	else if(num <=99999) 
-      	  printf("5 Digit");
-    	else 
-    	  printf("More than 5 digit.");
+	if(num <= 1)
+	  prime = 0;
+	else 
+	{
+		for(i = 2; i < num; i++)
+		{
+			if(num % i == 0)
+			{
+				prime = 0;
+				break;
+			}
+		}
+	}
+
+	if(prime == 1)
+	  printf("Number is Prime.");
+	else 
+      printf("Number is Not Prime.");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 6536
-4 Digit
+Enter a number: 7
+Number is Prime.
 
 </pre>
-	</body>
+	
+
+</body>
 </html>

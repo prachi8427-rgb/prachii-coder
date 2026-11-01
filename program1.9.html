@@ -4,36 +4,43 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 09 - Check Positive or Negtive Number</h1>
+	<h1>Program 09 - Print All Odd Numbers from 1 to 100</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Enter the number from the user it the number is negative or positive and find out of that number.</p>
+	<p>Write a program print all the odd number between 1 to 100.</p>
 	<h2>Logic</h2>
-	<p>Use if-else statement to check whether the number is positive, negative, or zero.</h2>
+	<p>Use a for loop and print numbers that are not divisible by 2.</p>
+	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num;
+	int i;
 
-	printf("Enter a number: ");
-	scanf("%d",&num);
-
-	if(num > 0)
-	  printf("Number is Positive");
-	else if(num < 0)
-	  printf("Number is Negative");
-	else 
-	  printf("Number is Zero");	
+	for(i = 1; i <= 100; i++)
+	{
+		if(i % 2 != 0)
+		printf("%d\n",i);
+	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: -10
-Number is Negative
-
+Enter a number: 5
+3
+5
+7
+9
+11
+...
+93
+95
+97
+99
 </pre>
-	</body>
+	
+
+</body>
 </html>

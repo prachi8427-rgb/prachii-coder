@@ -4,39 +4,37 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 18 - Identify Character Type</h1>
+	<h1>Program 18 - Print the Range Between Two Numbers</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Enter a character from user and it is in upper case, lower case, special characters or numbers.</p>
+	<p>Write a program to enter two numbers from user and print range from first number to second number.</p>
 	<h2>Logic</h2>
-	<p>Compare the character with uppercase letters, lower case letters, and digits.</h2>
+	<p>Use a for loop to print each number from first number to the second number.</p>
+	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
 
 void main()
 {
-	char ch;
+	int num1, num2, i;
 
-	printf("Enter a character: ");
-	ch=getche();
+	printf("Enter starting number: ");
+	scanf("%d",&num1);
+	printf("Enter ending number: ");
+	scanf("%d",&num2);
 
-	if(ch >= 'A' && ch <= 'Z')
-	  printf("\nUppercase Character");
-	else if(ch >= 'a' && ch <= 'z')
-	  printf("\nLowercase Character");
-	else if(ch >= '0' && ch <= '9')
-	  printf("\nNumber");
-	else
-	  printf("\nSpecial character");
+	for(i = num1; i <= num2; i++)
+	{
+		printf("%d ",i);
+	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a character: S
-Uppercase Character
-
+Enter starting number: 87
+Enter ending number: 103
+87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103
 </pre>
 	
 

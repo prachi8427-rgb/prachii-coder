@@ -4,38 +4,39 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 19 - Check Leap Year</h1>
+	<h1>Program 19 - Password Input up to 20 character</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Enter the year from user and check its leap year or not.</p>
+	<p>Write a program to enter password from user maximum 20 digits / character press enter key if you want to exit.</p>
 	<h2>Logic</h2>
-	<p>A year is a leap year if it is divisible by 400 or divisible by 4 but not by 100.</h2>
+	<p>Use a character array to store the password and a for loop to accept up to 20 characters.</p>
+	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num;
+	int i;
+	char pass[21];
 
-	printf("Enter a year: ");
-	scanf("%d",&num);
+	printf("Enter password : ");
+	for(i = 0; i < 20; i++)
+	{
+		pass[i] = getche();
 
-	if(num % 400 == 0)
-	  printf("Leap Year");
-	else if(num % 100 == 0)
-	  printf("Not a Leap Year");
-	else if(num % 4 == 0)
-	  printf("Leap Year");
-	else
-	  printf("Not a Leap Year");
+		if(pass[i] == 13)
+		break;
+	}
+
+	pass[i] = '\0';
+	printf("\nPassword: %s",pass);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a year: 2026
-Not a Leap Year
-
+Enter password : Prachi/4017/26
+Password: Prachi/4017/26
 </pre>
 	
 </body>

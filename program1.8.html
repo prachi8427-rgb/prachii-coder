@@ -4,37 +4,45 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 08 - Perform an Operation Based on Sign</h1>
+	<h1>Program 08 - Print a Number 100 Times</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Enter a number from the user if the number is negative then square the number and if it is positive then increment the number 20 times.</p>
+	<p>Write a program to Enter a number from the user and print that number 100 time.</p>
 	<h2>Logic</h2>
-	<p>Use if-else to check the sign of the number and perform the required operation.</h2>
+	<p>Use a for loop to print the entered number 100 times.</p>
+	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num,i;
+	int num, i;
 
 	printf("Enter a number: ");
 	scanf("%d",&num);
 
-	if(num < 0)
-	  printf("Square = %d", num * num);
-	else{
-	   for(i=0;i<20;i++)
-	   num++;
-	  printf("Number after 20 increments = %d",num);
+	for(i = 1; i <= 100; i++)
+	{
+		printf("%d\n",num);
 	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 10
-Number after 20 increments = 30
-
+Enter a number: 5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
 </pre>
-	</body>
+	
+
+</body>
 </html>

@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Program 23</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<h1>Program 23 - Check Whether a Number is Armstrong</h1>
+	<hr>
+	<h2>Problem Statement</h2>
+	<p>Write a program to enter a number from user and check it is Armstrong number or not.</p>
+	<h2>Logic</h2>
+	<p>Extract each digit using modulo operator, calculate the sum of the cubes of the digits, and compare it with the original number.</p>
+	<h2>Source Code</h2>
+	<pre class="source-code">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	int num, original, rem, sum = 0;
+
+	printf("Enter a number: ");
+	scanf("%d",&num);
+
+	original = num;
+
+	while(num > 0)
+	{
+		rem = num % 10;
+		sum sum + (rem * rem * rem);
+		num = num / 10;
+	}
+
+	if(original == sum)
+	  printf("It is an Armstrong Number.");
+	else
+	  printf("It is not an Armstrong Number.");
+}
+	</pre>
+	<h2>Output</h2>
+	<pre class="output">
+C:\TURBOC3\BIN&gt;TC
+Enter a number: 370
+It is an Armstrong Number.
+</pre>
+	
+</body>
+</html>

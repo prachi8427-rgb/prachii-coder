@@ -1,46 +1,112 @@
-<html>
+﻿<html>
 <head>
 	<title>Program 12</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 12 - Check Whether Four Characters are Equal</h1>
+	<h1>Program 12 - Menu-Driven Calculator</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Enter a four characters from users and check they are equal or not.</p>
+	<p>Enter a number from the user if the user enter 1 then you will perform addition operation by entering 2 number from user add it and display answer. if user enter 2 then subtract or if user enter 3 then multiply or if user enter 4 then divide or if user enter 5 then modulo or if any other number then print invalid .if user want to quit the program then user will enter Q.</p>
 	<h2>Logic</h2>
-	<p>Compare all four characters.</h2>
+	<p>Use a do-while loop to display the menu repeatedly and perform the selected operation using switch-case.</p>
+	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
+
 void main()
 {
-	char a,b,c,d;
+	int a, b;
+	char ch;
 
-	printf("Enter 1st character: ");
-	a=getche();
-	printf("\nEnter 2nd character: ");
-	b=getche();
-	printf("\nEnter 3rd character: ");
-	c=getche();
-	printf("\nEnter 4th character: ");
-	d=getche();
+	clrscr();
+
+	do{
+		printf("\n1. Addition");
+		printf("\n2. Subtraction");
+		printf("\n3. Multiplication");
+		printf("\n4. Division");
+		printf("\n5. Modulo");
+		printf("\nEnter your choice or Q to quit: ");
+		ch=getche();
+
+		if(ch == 'Q' || ch == 'q')
+		break;
+
+		if(ch >= '1' && ch <= '5')
+		{
+			printf("\nEnter 1st number: ");
+			scanf("%d",&a);
+			printf("Enter 2nd number: ");
+			scanf("%d",&b);
+
+			switch(ch)
+			{
+				case '1':
+				  printf("Addition = %d", a + b);
+				  break;
+
+				case '2':
+				  printf("Subtraction = %d", a - b);
+				  break;
+
+				case '3':
+				  printf("Multiplication = %d", a * b);
+				  break;
+
+				case '4':
+				if(b != 0)
+				  printf("Division = %d", a / b);
+				else
+				  printf("Division by Zero is not possible.");
+				  break;
+
+				case '5':
+				  if(b != 0)
+				  printf("Modulo = %d", a % b);
+				else
+				  printf("Modulo by Zero is not possible.");
+				  break;
+			}
+		}
+
+		else
+		printf("\nInvalid Choice!");
+	} while(1);
 	
-	if(a == b && b == c && c == d)
-	  printf("\nAll Equal");
-	else 
-	  printf("\nNot Equal");
+	printf("\nProgram Quit.");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
-C:\TURBOC3\BIN&gt;TC
-Enter 1st character: s
-Enter 2nd character: s
-Enter 3rd character: s
-Enter 4th character: d
-Not Equal
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+Enter your choice or Q to quit: 1
+Enter 1st number: 10
+Enter 2nd number: 5
+Addition = 15
 
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+Enter your choice or Q to quit: 9
+Invalid Choice!
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+Enter your choice or Q to quit: Q
+Program Quit
 </pre>
-	</body>
+	
+
+</body>
 </html>

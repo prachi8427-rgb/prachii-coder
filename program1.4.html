@@ -4,40 +4,49 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 04 - Display Grade According to Marks</h1>
+	<h1>Program 04 - Print Each Digit on a Seprate Line</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Enter a number from the user if the number is between 0 to 40 then we will print fail if the number is between 40 to 60 then we will print C grade ,if the number is between 60 to 80 than we will print B grade ,if the number is between 80 to 100 then we will print A grade and rest all number are invalid.</p>
+	<p>Write a program to enter a number from the user and print all digit of the number in separate line.</p>
 	<h2>Logic</h2>
-	<p>Use the if-else statements to display the grade according to the marks.</p>
+	<p>Extract the last digit using the modulus operator and print it on a seperate line. Reverse the number first to display digits in their original order.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int marks;
+	int num, rem, rev = 1;
 
-	printf("Enter your marks: ");
-	scanf("%d",&marks);
+	printf("Enter a number: ");
+	scanf("%d",&num);
 
-	if(marks < 0 || marks > 100)
-	  printf("Invailid");
-	else if(marks >= 80)
-	  printf("A Grade");
-	else if(marks >=60) 
-      	  printf("B Grade");
- 	else if(marks >=40) 
-      	  printf("C Grade");
-    else 
-       printf("Fail");
+	if(num < 0)
+	  num = -num;
+	
+	while(num > 0)
+	{
+		rem = num % 10;
+		rev = rev * 10 + rem;
+		num = num /10;
+	}
+
+	while(rev > 0)
+	{
+		rem = rev % 10;
+		printf("%d\n", rem);
+		rev = rev / 10;
+	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter your marks: 79
-B Grade
+Enter a number: 1234
+1
+2
+3
+4
 
 </pre>
 	

@@ -4,34 +4,43 @@
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 06 - Change the Sign of Number</h1>
+	<h1>Program 06 - Print Series from 1 to 1 Lakh</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Enter a number from the user if it is a negative then convert into positive and if it is positive then convert into negative often that print the number.</p>
+	<p>Write a program to print a series 1 to 1 lakh.</p>
 	<h2>Logic</h2>
-	<p>Multiply the number by -1 to change its sign.</p>
+	<p>Use a for loop to print numbers from 1 to 100000.</p>
 	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num;
+	int i;
 
-	printf("Enter a number: ");
-	scanf("%d",&num);
-
-	num = num*-1;
-
-	printf("Number after changing sign = %d",num);
+	for(i = 1; i <= 100000; i++)
+	{
+		printf("%d\n",i);
+	}
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: -52
-Number after changing sign = 52
-
+1
+2
+3
+4
+5
+...
+99995
+99996
+99997
+99998
+99999
+100000
 </pre>
-	</body>
+	
+
+</body>
 </html>

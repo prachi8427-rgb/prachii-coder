@@ -1,46 +1,39 @@
-<html>
+﻿<html>
 <head>
 	<title>Program 16</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 16 - Compare Two Characters</h1>
+	<h1>Program 16 - Find the Sum From 0 to a Given Number</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Enter two characters from user and check both are same or not, if not same then find out difference between them.</p>
+	<p>Write a program to enter a number from user and print total from 0 to that number.</p>
 	<h2>Logic</h2>
-	<p>Compare the characters and subtract their character values if they are different.</h2>
+	<p>Use a for loop to add all number from 0 to the entered number.</p>
+	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
 
 void main()
 {
-	char ch1,ch2;
+	int num, i, sum = 0;
 
-	printf("Enter 1st character: ");
-	ch1=getche();
-	printf("\nEnter 2nd character: ");
-	ch2=getche();
-	
-	if(ch1 == ch2)
-	  printf("\nBoth are same");
-	else
-	{
-	   if(ch1 > ch2)
-	     printf("\nDifference = %d",ch1 - ch2);
-	   else
-	     printf("\nDifference = %d",ch2 - ch1);
-	}
+	printf("Enter a number: ");
+	scanf("%d",&num);
+
+	for(i = 0; i <= num; i++)
+	sum = sum + i;
+
+	printf("Sum = %d",sum);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 1st character: B
-Enter 2nd character: a
-Difference = 31
+Enter a number: 8
+Sum = 36
 </pre>
 	
+
 </body>
 </html>

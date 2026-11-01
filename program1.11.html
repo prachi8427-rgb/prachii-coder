@@ -1,39 +1,42 @@
-<html>
+﻿<html>
 <head>
 	<title>Program 11</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 11 - Check Divisibility by 4</h1>
+	<h1>Program 11 - Reverse a Number</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Enter a number from user and check it is divisible by 4 or not.</p>
+	<p>Write a program to enter the number from user and reverse the number.</p>
 	<h2>Logic</h2>
-	<p>Use modulus operator (%) to check whether the remainder is zero.</h2>
+	<p>Extract the last digit using modulus, add it to the reversed number, and remove the last digit using division.</p>
+	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num;
+	int num, rem, rev = 0;
 
 	printf("Enter a number: ");
 	scanf("%d",&num);
-	
-	if(num % 4)
-	  printf("Number is not divisible by 4");
-	else 
-	  printf("Number is divisible by 4");
+
+	while(num != 0)
+	{
+		rem = num % 10;
+		rev = rev * 10 + rem;
+		num = num / 10;
+	}
+
+	printf("Reverse = %d",rev);
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter a number: 24
-Number is divisible by 4
-
+Enter a number: 12345
+Reverse = 54321
 </pre>
 	
-
 </body>
 </html>

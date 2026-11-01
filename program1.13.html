@@ -1,45 +1,48 @@
-<html>
+﻿<html>
 <head>
 	<title>Program 13</title>
 	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<h1>Program 13 - Find the Greatest of Three Numbers</h1>
+	<h1>Program 13 - Check Whether a Number is Palindrome</h1>
 	<hr>
 	<h2>Problem Statement</h2>
-	<p>Enter three numbers from users and tell which is greater.</p>
+	<p>Write a program to enter the number from user and check its palindrome or not.</p>
 	<h2>Logic</h2>
-	<p>Compare the three numbers and find the greatest number.</h2>
+	<p>Reverse the number and compare it with the original number.</p>
+	<h2>Source Code</h2>
 	<pre class="source-code">
 #include &lt;stdio.h&gt;
 
 void main()
 {
-	int num1,num2,num3;
+	int num, original, rem, rev=0;
 
-	printf("Enter 1st number: ");
-	scanf("%d",&num1);
-	printf("Enter 2nd number: ");
-	scanf("%d",&num2);
-	printf("Enter 3rd number: ");
-	scanf("%d",&num3);
-	
-	if(num1 >= num2 && num1 >= num3)
-	  printf("Greatest = %d",num1);
-	else if(num2 >= num1 && num2 >= num3)
-	  printf("Greatest = %d",num2);
+	printf("Enter a number: ");
+	scanf("%d",&num);
+
+	original = num;
+
+	while(num > 0)
+	{
+		rem = num % 10;
+		rev = rev * 10 + rem;
+		num = num / 10;
+	}
+
+	if(original == rev)
+	  printf("Number is Palindrome");
+
 	else
-	  printf("Greatest = %d",num3);
+	  printf("Number is Not Palindrome");
 }
 	</pre>
 	<h2>Output</h2>
 	<pre class="output">
 C:\TURBOC3\BIN&gt;TC
-Enter 1st number: 10
-Enter 2nd number: 30
-Enter 3rd number: 15
-Greatest = 30
-
+Enter a number: 121
+Number is Palindrome
 </pre>
-	</body>
+	
+</body>
 </html>
